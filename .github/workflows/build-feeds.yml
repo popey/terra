@@ -10,6 +10,8 @@ on:
 jobs:
   build-and-deploy:
     runs-on: ubuntu-latest
+    permissions:
+      contents: write # Grants the token permission to commit files
     steps:
       - name: Checkout Repository
         uses: actions/checkout@v4
