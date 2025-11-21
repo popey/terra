@@ -18,12 +18,11 @@ function renderBatch() {
         feedCard.className = 'p-card'; 
         
         const formattedDate = new Date(item.date).toLocaleDateString();
-        
         const hasSnippet = item.snippet && item.snippet.length > 0;
         
         feedCard.innerHTML = `
             <div class="p-card__content">
-                <p class="p-heading--6 u-no-margin--bottom">${item.sourceName}</p>
+                <p class="p-heading--6">${item.sourceName}</p>
                 <hr class="u-sv-1" />
                 <h3 class="p-heading--4">
                     <a href="${item.link}" target="_blank" rel="noopener noreferrer">
@@ -35,47 +34,17 @@ function renderBatch() {
                 </p>
                 
                 ${hasSnippet ? `
-                    <div class="snippet-content is-hidden">
-                        <p class="u-no-margin--bottom u-text--muted">${item.snippet}</p>
-                    </div>
-                    <button class="p-button--base u-align-text--left expand-snippet" type="button">
-                        <span class="expand-text">Show snippet</span>
-                        <i class="p-icon--caret-down" aria-hidden="true"></i>
-                    </button>
+                    <p class="u-text--muted u-small-text u-sv-1">${item.snippet}</p>
                 ` : ''}
             </div>
         `;
         
-        if (hasSnippet) {
-            const expandButton = feedCard.querySelector('.expand-snippet');
-            expandButton.addEventListener('click', toggleSnippet);
-        }
-
         columnWrapper.appendChild(feedCard);
         container.appendChild(columnWrapper);
     });
 
     currentIndex = endIndex;
     checkLoadMoreStatus();
-}
-
-function toggleSnippet(event) {
-    const button = event.currentTarget;
-    const content = button.parentNode.querySelector('.snippet-content'); 
-    const icon = button.querySelector('i');
-    const textSpan = button.querySelector('.expand-text');
-
-    content.classList.toggle('is-hidden');
-    
-    if (content.classList.contains('is-hidden')) {
-        textSpan.textContent = 'Show snippet';
-        icon.classList.remove('p-icon--caret-up');
-        icon.classList.add('p-icon--caret-down');
-    } else {
-        textSpan.textContent = 'Hide snippet';
-        icon.classList.remove('p-icon--caret-down');
-        icon.classList.add('p-icon--caret-up');
-    }
 }
 
 function createLoadMoreButtonWrapper() {
