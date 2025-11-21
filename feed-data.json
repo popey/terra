@@ -1,9 +1,975 @@
 [
   {
-    "sourceName": "Ubuntu Weekly News",
-    "sourceUrl": "https://discourse.ubuntu.com/c/uwn/uwn-issues/419.rss",
-    "title": "Ubuntu Weekly Newsletter Issue 918",
-    "link": "https://discourse.ubuntu.com/t/ubuntu-weekly-newsletter-issue-918/72013",
-    "date": "2025-11-10T23:02:19.000Z"
+    "sourceName": "Balint Reczey",
+    "sourceUrl": "https://balintreczey.hu/blog/tag/ubuntu/feed/",
+    "title": "Think you can’t interpose static binaries with LD_PRELOAD? Think again!",
+    "link": "https://balintreczey.hu/blog/think-you-cant-interpose-static-binaries-with-ld_preload-think-again/",
+    "date": "2025-11-20T20:56:17.000Z"
+  },
+  {
+    "sourceName": "Ubuntu Blog",
+    "sourceUrl": "https://ubuntu.com/blog/feed/",
+    "title": "83% of organizations see value in adopting open source, but report major gaps in security and governance",
+    "link": "https://ubuntu.com//blog/state-of-global-open-source-2025",
+    "date": "2025-11-18T16:10:34.000Z"
+  },
+  {
+    "sourceName": "Podcast Ubuntu Portugal",
+    "sourceUrl": "https://podcastubuntuportugal.org/feed/podcast/index.xml",
+    "title": "E366 Morangos Com Linux",
+    "link": "https://podcastubuntuportugal.org/e366/",
+    "date": "2025-11-13T00:00:00.000Z"
+  },
+  {
+    "sourceName": "Soumyadeep Ghosh",
+    "sourceUrl": "https://soumyadghosh.github.io/website/index.xml",
+    "title": "GSoC 2025 Final Submission: Re-architecting PyCups for a Modern, Pythonic Future",
+    "link": "https://soumyadghosh.github.io/website/interns/gsoc-2025/gsoc-final-submission/",
+    "date": "2025-11-09T15:41:39.000Z"
+  },
+  {
+    "sourceName": "Colin Watson",
+    "sourceUrl": "https://www.chiark.greenend.org.uk/~cjwatson/blog/feeds/tag/planet-ubuntu.atom.xml",
+    "title": "Free software activity in October 2025",
+    "link": "https://www.chiark.greenend.org.uk/~cjwatson/blog/activity-2025-10.html",
+    "date": "2025-11-09T15:33:33.000Z"
+  },
+  {
+    "sourceName": "Stéphane Graber",
+    "sourceUrl": "https://stgraber.org/category/planet-ubuntu/feed/",
+    "title": "Introducing IncusOS!",
+    "link": "https://stgraber.org/2025/11/07/introducing-incusos/",
+    "date": "2025-11-07T09:33:48.000Z"
+  },
+  {
+    "sourceName": "Jon Seager",
+    "sourceUrl": "https://jnsgr.uk/tags/ubuntu/index.xml",
+    "title": "Ubuntu Summit 25.10: Personal Highlights",
+    "link": "https://jnsgr.uk/2025/11/ubuntu-summit-25/",
+    "date": "2025-11-02T00:00:00.000Z"
+  },
+  {
+    "sourceName": "Scarlett Gately Moore",
+    "sourceUrl": "https://www.scarlettgatelymoore.dev/category/open-source-software/feed/",
+    "title": "A New Chapter: Career Transition Update",
+    "link": "https://www.scarlettgatelymoore.dev/a-new-chapter-career-transition-update/",
+    "date": "2025-10-31T15:38:55.000Z"
+  },
+  {
+    "sourceName": "Ubuntu Studio",
+    "sourceUrl": "http://ubuntustudio.org/category/planetubuntu/feed/",
+    "title": "Upgrading from 25.04 to 25.10",
+    "link": "https://ubuntustudio.org/2025/10/upgrading-from-25-04-to-25-10/",
+    "date": "2025-10-29T20:08:52.000Z"
+  },
+  {
+    "sourceName": "Launchpad News",
+    "sourceUrl": "http://news.launchpad.net/feed",
+    "title": "Make fetch service opt-in",
+    "link": "https://blog.launchpad.net/general/make-fetch-service-opt-in",
+    "date": "2025-10-28T11:31:12.000Z"
+  },
+  {
+    "sourceName": "Paul Tagliamonte",
+    "sourceUrl": "http://notes.pault.ag/feeds/all-en.atom.xml",
+    "title": "It's NOT always DNS.",
+    "link": "https://notes.pault.ag/its-not-always-dns/",
+    "date": "2025-10-27T17:15:00.000Z"
+  },
+  {
+    "sourceName": "Julian Andres Klode",
+    "sourceUrl": "https://blog.jak-linux.org/post/index.xml",
+    "title": "Sound Removals",
+    "link": "https://blog.jak-linux.org/2025/10/18/sound-removals/",
+    "date": "2025-10-18T19:37:17.000Z"
+  },
+  {
+    "sourceName": "Erich Eickmeyer",
+    "sourceUrl": "https://ericheickmeyer.com/category/planet-ubuntu/feed/",
+    "title": "Why I Won’t Be Attending or Speaking at Ubuntu Summit 25.10",
+    "link": "https://ericheickmeyer.com/2025/10/09/why-i-wont-be-attending-or-speaking-at-ubuntu-summit-25-10/",
+    "date": "2025-10-09T22:01:09.000Z"
+  },
+  {
+    "sourceName": "Lubuntu Blog",
+    "sourceUrl": "http://lubuntu.me/feed/?mrss=off",
+    "title": "Lubuntu 25.10 (Questing Quokka) Released!",
+    "link": "https://lubuntu.me/lubuntu-25-10-questing-quokka-released/",
+    "date": "2025-10-09T14:05:30.000Z"
+  },
+  {
+    "sourceName": "David Mohammed",
+    "sourceUrl": "https://ubuntubudgie.org/feed/",
+    "title": "Ubuntu Budgie 25.10 release notes",
+    "link": "https://ubuntubudgie.org/2025/10/ubuntu-budgie-25-10-release-notes/",
+    "date": "2025-10-08T17:26:51.000Z"
+  },
+  {
+    "sourceName": "Jonathan Riddell",
+    "sourceUrl": "http://jriddell.org/feed/?tag=planetubuntu",
+    "title": "Adios Chicos, 25 Years of KDE",
+    "link": "https://jriddell.org/2025/09/14/adios-chicos-25-years-of-kde/",
+    "date": "2025-09-14T20:56:35.000Z"
+  },
+  {
+    "sourceName": "Andrea Corbellini",
+    "sourceUrl": "http://andrea.corbellini.name/ubuntu.rss",
+    "title": "Testing crash recovery features in a CI environment",
+    "link": "https://andrea.corbellini.name/2025/09/09/testing-crash-recovery-features-in-ci/",
+    "date": "2025-09-09T00:05:00.000Z"
+  },
+  {
+    "sourceName": "Dougie Richardson",
+    "sourceUrl": "https://dougiewougie.com/category/linux/feed/",
+    "title": "CLI Corner: rsync",
+    "link": "https://dougiewougie.com/linux/cli-corner-rsync/",
+    "date": "2025-08-31T10:38:37.000Z"
+  },
+  {
+    "sourceName": "Jonathan Carter",
+    "sourceUrl": "https://jonathancarter.org/feed",
+    "title": "Debian 13",
+    "link": "https://jonathancarter.org/2025/08/10/debian-13/",
+    "date": "2025-08-10T14:53:36.000Z"
+  },
+  {
+    "sourceName": "Thomas Bechtold",
+    "sourceUrl": "https://toabctl.wordpress.com/category/planet-ubuntu/feed/?mrss=off",
+    "title": "Streamline Root Filesystem Modifications with chimg",
+    "link": "https://toabctl.wordpress.com/2025/07/31/streamline-root-filesystem-modifications-with-chimg/",
+    "date": "2025-07-31T18:15:36.000Z"
+  },
+  {
+    "sourceName": "Dimitri John Ledkov",
+    "sourceUrl": "http://feeds.feedburner.com/tdlk",
+    "title": "Achieving actually full disk encryption of UEFI ESP at rest with TCG OPAL, FIPS, LUKS",
+    "link": "http://blog.surgut.co.uk/2025/07/achieving-actually-full-disk-encryption.html",
+    "date": "2025-07-28T11:13:00.000Z"
+  },
+  {
+    "sourceName": "Salih Emin",
+    "sourceUrl": "http://utappia.org/feed/",
+    "title": "uCareSystem v25.07.17: Stability and Integration in the best system maintenance tool for Debian & Ubuntu",
+    "link": "https://utappia.org/2025/07/17/ucaresystem-v25-07-17-system-maintenance-tool-debian-ubuntu/",
+    "date": "2025-07-17T22:09:26.000Z"
+  },
+  {
+    "sourceName": "Stuart Langridge",
+    "sourceUrl": "http://feeds.feedburner.com/kryogenix",
+    "title": "Making a Discord activity with PHP",
+    "link": "https://www.kryogenix.org/days/2025/07/08/making-a-discord-activity-with-php/",
+    "date": "2025-07-08T07:11:00.000Z"
+  },
+  {
+    "sourceName": "José Antonio Rey",
+    "sourceUrl": "https://joseeantonior.wordpress.com/category/planet-ubuntu/feed/atom",
+    "title": "2025: Finding a job, and the understanding the market",
+    "link": "https://joseeantonior.wordpress.com/2025/06/25/2025-finding-a-job-and-the-understanding-the-market/",
+    "date": "2025-06-25T21:39:35.000Z"
+  },
+  {
+    "sourceName": "Serge Hallyn",
+    "sourceUrl": "https://s3hh.wordpress.com/feed/?mrss=off",
+    "title": "Attitudes on privacy and tracking",
+    "link": "https://s3hh.wordpress.com/2025/05/25/attitudes-on-privacy-and-tracking/",
+    "date": "2025-05-25T13:00:15.000Z"
+  },
+  {
+    "sourceName": "Oliver Grawert",
+    "sourceUrl": "https://ograblog.wordpress.com/feed/atom",
+    "title": "Rooming with Mark",
+    "link": "https://ograblog.wordpress.com/2025/05/16/rooming-with-mark/",
+    "date": "2025-05-16T11:17:23.000Z"
+  },
+  {
+    "sourceName": "Simos Xenitellis",
+    "sourceUrl": "https://blog.simos.info/category/planet-ubuntu/feed/?mrss=off",
+    "title": "How to run a Linux Desktop virtual machine on Incus",
+    "link": "https://blog.simos.info/how-to-run-a-linux-desktop-virtual-machine-on-incus/",
+    "date": "2025-05-01T22:51:53.000Z"
+  },
+  {
+    "sourceName": "Ubuntu MATE",
+    "sourceUrl": "https://ubuntu-mate.org/rss.xml",
+    "title": "Ubuntu MATE 25.04 Release Notes",
+    "link": "https://ubuntu-mate.org/blog/ubuntu-mate-plucky-puffin-release-notes/",
+    "date": "2025-04-15T00:00:00.000Z"
+  },
+  {
+    "sourceName": "Elizabeth K. Joseph",
+    "sourceUrl": "http://princessleia.com/journal/?cat=2&feed=rss2",
+    "title": "A VisionFive 2 and a Raspberry Pi 1 B",
+    "link": "https://princessleia.com/journal/2025/04/a-visionfive-2-and-a-raspberry-pi-1-b/",
+    "date": "2025-04-03T20:43:31.000Z"
+  },
+  {
+    "sourceName": "Luke Faraone",
+    "sourceUrl": "http://blog.luke.wf/feeds/posts/default/-/ubuntu-planet/",
+    "title": "I'm running for the OSI board... maybe",
+    "link": "https://blog.luke.wf/2025/02/im-running-for-osi-board-maybe.html",
+    "date": "2025-02-20T17:31:00.001Z"
+  },
+  {
+    "sourceName": "Alan Pope",
+    "sourceUrl": "https://popey.com/blog/post/index.xml",
+    "title": "Spotlighting Community Stories",
+    "link": "https://blog.popey.com/2025/02/spotlighting-community-stories/",
+    "date": "2025-02-13T10:00:00.000Z"
+  },
+  {
+    "sourceName": "Nobuto Murata",
+    "sourceUrl": "https://nobuto-m.github.io/tag/planet-ubuntu/index.xml",
+    "title": "How to prevent TrackPoint or touchpad events from waking up ThinkPad T14 Gen 5 AMD from suspend",
+    "link": "https://nobuto-m.github.io/post/2025/how-to-prevent-trackpoint-events-from-waking-up-thinkpad-t14-gen-5-amd-from-suspend/",
+    "date": "2025-01-09T14:50:38.000Z"
+  },
+  {
+    "sourceName": "Santiago Zarate",
+    "sourceUrl": "https://foursixnine.io/atom.xml",
+    "title": "Quick howto for systemd-inhibit",
+    "link": "https://foursixnine.io//blog/systemd/linux/hacks/2024/12/31/quickhowtoforsystemdinhibit.html",
+    "date": "2024-12-31T00:00:00.000Z"
+  },
+  {
+    "sourceName": "Benjamin Mako Hill",
+    "sourceUrl": "http://mako.cc/copyrighteous/?flav=rss",
+    "title": "Thug Life",
+    "link": "https://mako.cc/copyrighteous/thug-life",
+    "date": "2024-12-21T23:06:02.000Z"
+  },
+  {
+    "sourceName": "Colin King",
+    "sourceUrl": "http://smackerelofopinion.blogspot.com/feeds/posts/default",
+    "title": "C void return gotcha",
+    "link": "http://smackerelofopinion.blogspot.com/2024/12/c-void-return-gotcha.html",
+    "date": "2024-12-18T17:43:00.005Z"
+  },
+  {
+    "sourceName": "Bryan Quigley",
+    "sourceUrl": "https://bryanquigley.com/rss.xml",
+    "title": "2024 LiveCD Memory Usage Compare",
+    "link": "https://bryanquigley.com/posts/memory-usage/2024-livecd-memory-usage-compare.html",
+    "date": "2024-10-20T00:54:00.000Z"
+  },
+  {
+    "sourceName": "Lukas Märdian",
+    "sourceUrl": "https://blog.slyon.de/category/ubuntu/feed/",
+    "title": "Waiting for a Linux system to be online",
+    "link": "https://blog.slyon.de/2024/10/15/waiting-for-a-linux-system-to-be-online/",
+    "date": "2024-10-15T07:33:10.000Z"
+  },
+  {
+    "sourceName": "Matthias Klumpp",
+    "sourceUrl": "http://blog.tenstral.net/category/planet/planet-ubuntu/feed",
+    "title": "Freedesktop Specs Website Update",
+    "link": "https://blog.tenstral.net/2024/08/freedesktop-specs-website-update.html",
+    "date": "2024-08-04T18:54:37.000Z"
+  },
+  {
+    "sourceName": "Harisfazillah Jamel",
+    "sourceUrl": "https://feeds.feedburner.com/TodayNotesBlogAboutLinuxOpenSourceComputerInternet",
+    "title": "Critical OpenSSH Vulnerability (CVE-2024-6387): Please Update Your Linux",
+    "link": "http://blog.harisfazillah.info/2024/07/critical-openssh-vulnerability-cve-2024.html",
+    "date": "2024-07-04T21:35:00.005Z"
+  },
+  {
+    "sourceName": "Martin-Éric Racine",
+    "sourceUrl": "http://q-funk.blogspot.com/feeds/posts/default/-/Ubuntu",
+    "title": "dhcpcd almost ready to replace ISC dhclient in Debian",
+    "link": "http://q-funk.blogspot.com/2023/11/dhcpcd-almost-ready-to-replace-isc.html",
+    "date": "2023-11-16T08:31:00.003Z"
+  },
+  {
+    "sourceName": "Ross Gammon",
+    "sourceUrl": "https://rossgammon68.wordpress.com/category/open-source/ubuntu/ubuntu-planet/feed/?mrss=off",
+    "title": "Ubuntu Summit 2023",
+    "link": "https://rossgammon68.wordpress.com/2023/11/05/ubuntu-summit-2023/",
+    "date": "2023-11-05T16:01:16.000Z"
+  },
+  {
+    "sourceName": "Corey Bryant",
+    "sourceUrl": "https://wrestlingpenguins.wordpress.com/category/ubuntu/feed/?mrss=off",
+    "title": "OpenStack 2023.2 Bobcat for Ubuntu 22.04 LTS",
+    "link": "https://wrestlingpenguins.wordpress.com/2023/10/06/openstack-2023-2-bobcat-for-ubuntu-22-04-lts/",
+    "date": "2023-10-06T12:47:34.000Z"
+  },
+  {
+    "sourceName": "Jo Shields",
+    "sourceUrl": "http://apebox.org/wordpress/tag/ubuntu/feed/",
+    "title": "Building a NAS",
+    "link": "https://apebox.org/wordpress/tech/1325",
+    "date": "2023-09-12T21:33:05.000Z"
+  },
+  {
+    "sourceName": "Muhammad Fauzilkamil Zainuddin",
+    "sourceUrl": "https://coderstalk.blogspot.com/feeds/posts/default/",
+    "title": "Understanding vm.swappiness: Improving Linux Performance and Memory Management",
+    "link": "https://coderstalk.blogspot.com/2023/07/understanding-vmswappiness-improving.html",
+    "date": "2023-07-23T23:13:00.001Z"
+  },
+  {
+    "sourceName": "Sergio Durigan Junior",
+    "sourceUrl": "https://blog.sergiodj.net/tag/ubuntu.xml",
+    "title": "Ubuntu debuginfod and source code indexing",
+    "link": "https://blog.sergiodj.net/posts/ubuntu-debuginfod-source-code-indexing/",
+    "date": "2023-05-13T20:43:00.000Z"
+  },
+  {
+    "sourceName": "Dustin Kirkland",
+    "sourceUrl": "http://blog.dustinkirkland.com/feeds/posts/default/-/Ubuntu",
+    "title": "My Walk on the Portuguese Camino de Santiago, 2023",
+    "link": "http://blog.dustinkirkland.com/2023/04/camino-de-santiago-2023.html",
+    "date": "2023-05-07T18:49:00.000Z"
+  },
+  {
+    "sourceName": "Scott Moser",
+    "sourceUrl": "https://smoser.github.io/feed/by_tag/ubuntu.xml",
+    "title": "Today I learned: set -e sucks even more.",
+    "link": "https://smoser.github.io//2023/04/27/set-e-bad.html",
+    "date": "2023-04-27T00:00:00.000Z"
+  },
+  {
+    "sourceName": "Harald Sitter",
+    "sourceUrl": "https://apachelog.wordpress.com/category/kde/feed/?mrss=off&category_name=ubuntu",
+    "title": "Selenium + AT-SPI = GUI Testing",
+    "link": "https://apachelog.wordpress.com/2022/12/14/selenium-at-spi-gui-testing/",
+    "date": "2022-12-14T15:59:20.000Z"
+  },
+  {
+    "sourceName": "Timo Jyrinki",
+    "sourceUrl": "http://losca.blogspot.com/feeds/posts/default/-/ubuntu?alt=rss",
+    "title": "Running Cockpit inside ALP",
+    "link": "https://losca.blogspot.com/2022/12/running-cockpit-inside-alp.html",
+    "date": "2022-12-10T13:07:00.000Z"
+  },
+  {
+    "sourceName": "Stephen Kelly",
+    "sourceUrl": "https://steveire.wordpress.com/feed/?mrss=off",
+    "title": "Grantlee version 5.3.1 now available",
+    "link": "https://steveire.wordpress.com/2022/11/11/grantlee-version-5-3-1-now-available/",
+    "date": "2022-11-11T20:55:50.000Z"
+  },
+  {
+    "sourceName": "Costales",
+    "sourceUrl": "https://costales.github.io/tags/planet/index.xml",
+    "title": "Clipboard content to file. New app",
+    "link": "https://costales.github.io/posts/clipboard-to-file/",
+    "date": "2022-10-22T08:29:27.000Z"
+  },
+  {
+    "sourceName": "Jeremy Bicha",
+    "sourceUrl": "https://jeremy.bicha.net/category/ubuntu/feed/?mrss=off",
+    "title": "Ubuntu bug fix anniversary",
+    "link": "https://jeremy.bicha.net/2022/10/17/ubuntu-bug-fix-anniversary/",
+    "date": "2022-10-17T13:54:46.000Z"
+  },
+  {
+    "sourceName": "Ted Gould",
+    "sourceUrl": "http://gould.cx/ted/blog/feed.xml",
+    "title": "Inkscape PLC Rocketchat Logs",
+    "link": "https://gould.cx/ted/blog/2022/09/09/Inkscape-PLC-Rocketchat-Transcripts/",
+    "date": "2022-09-09T00:00:00.000Z"
+  },
+  {
+    "sourceName": "Oli Warner",
+    "sourceUrl": "http://feeds.feedburner.com/OliUbuntu",
+    "title": "Save £23,265 with *one weird trick!*",
+    "link": "https://thepcspy.com/read/ten-years-23k-saved/",
+    "date": "2022-07-20T00:00:00.000Z"
+  },
+  {
+    "sourceName": "Kees Cook",
+    "sourceUrl": "http://outflux.net/blog/archives/category/ubuntu/feed",
+    "title": "finding binary differences",
+    "link": "https://outflux.net/blog/archives/2022/06/24/finding-binary-differences/",
+    "date": "2022-06-24T20:11:48.000Z"
+  },
+  {
+    "sourceName": "Mark Van den Borre",
+    "sourceUrl": "http://blog.markvdb.be/feeds/posts/full/-/english/ubuntu",
+    "title": "How much does my flight sponsor Vladimir?",
+    "link": "http://blog.markvdb.be/2022/04/how-much-does-my-flight-sponsor-vladimir.html",
+    "date": "2022-04-07T15:20:00.004Z"
+  },
+  {
+    "sourceName": "Sujeevan Vijayakumaran",
+    "sourceUrl": "https://svij.org/tags/ubuntu-planet/index.xml",
+    "title": "All-remote workspace at home",
+    "link": "https://svij.org/blog/2021/12/05/all-remote-workspace-at-home/",
+    "date": "2021-12-05T15:10:00.000Z"
+  },
+  {
+    "sourceName": "Olivier Fraysse",
+    "sourceUrl": "https://people.ubuntu.com/~olivier.fraysse/index.xml",
+    "title": "Impish Indri Ubuntu-fr t-shirt",
+    "link": "https://people.ubuntu.com/~olivier.fraysse/index.xml#of202110202210",
+    "date": "2021-10-20T22:10:00.000Z"
+  },
+  {
+    "sourceName": "Ian Weisser",
+    "sourceUrl": "http://cheesehead-techblog.blogspot.com/feeds/posts/default/-/planet-ubuntu",
+    "title": "Installing Ubuntu Core onto 64-bit Bare Metal",
+    "link": "http://cheesehead-techblog.blogspot.com/2021/10/installing-ubuntu-core-onto-64-bit-bare.html",
+    "date": "2021-10-07T21:29:00.002Z"
+  },
+  {
+    "sourceName": "Jelmer Vernooij",
+    "sourceUrl": "https://www.jelmer.uk/feeds/tag/ubuntu.atom.xml",
+    "title": "Web Hooks for the Janitor",
+    "link": "https://www.jelmer.uk/janitor-webhooks.html",
+    "date": "2021-09-06T20:00:00.000Z"
+  },
+  {
+    "sourceName": "Torsten Franz",
+    "sourceUrl": "https://torstenfranz.wordpress.com/category/planet-ubuntu/feed/?mrss=off",
+    "title": "My first six months at the Ubuntu Community Council",
+    "link": "https://torstenfranz.wordpress.com/2021/04/25/my-first-six-months-at-the-ubuntu-community-council/",
+    "date": "2021-04-25T15:30:00.000Z"
+  },
+  {
+    "sourceName": "Dmitry Shachnev",
+    "sourceUrl": "http://mitya57.me/weblog/feeds/planet.atom.xml",
+    "title": "ReText turns 10 years",
+    "link": "https://mitya57.me/weblog/2021/02/retext-turns-10-years.html",
+    "date": "2021-02-21T18:30:00.000Z"
+  },
+  {
+    "sourceName": "Didier Roche",
+    "sourceUrl": "https://didrocks.fr/tags/pu/index.xml",
+    "title": "ZFS focus on Ubuntu 20.04 LTS: ZSys properties on ZFS datasets",
+    "link": "https://didrocks.fr/2020/06/19/zfs-focus-on-ubuntu-20.04-lts-zsys-properties-on-zfs-datasets/",
+    "date": "2020-06-19T10:15:19.000Z"
+  },
+  {
+    "sourceName": "Valorie Zimmerman",
+    "sourceUrl": "http://linuxgrandma.blogspot.com/feeds/posts/default",
+    "title": "Open Letter to KDE GSoC Students We Could Not Accept",
+    "link": "http://linuxgrandma.blogspot.com/2020/05/open-letter-to-kde-gsoc-students-we.html",
+    "date": "2020-05-05T20:38:00.001Z"
+  },
+  {
+    "sourceName": "Julian Alarcon",
+    "sourceUrl": "https://desentropia.com/tags/ubuntu/index.xml",
+    "title": "Como descargar y ver series o peliculas gratis en esta Cuarentena",
+    "link": "https://desentropia.com/2020/04/11/como-descargar-y-ver-series-o-peliculas-gratis-en-esta-cuarentena/",
+    "date": "2020-04-11T19:58:18.000Z"
+  },
+  {
+    "sourceName": "Sergio Schvezov",
+    "sourceUrl": "http://blog.sergiusens.org/categories/ubuntu/index.xml",
+    "title": "Fingerprint Reader Support for Lenovo x390Y on Ubuntu",
+    "link": "http://blog.sergiusens.org/posts/fingerprint-reader-support-for-lenovo-x390y-on-ubuntu/",
+    "date": "2020-03-28T22:38:02.000Z"
+  },
+  {
+    "sourceName": "Eric Hammond",
+    "sourceUrl": "http://feeds.alestic.com/alestic-planetubuntu",
+    "title": "Creating AWS IAM Access Analyzers In All Regions Of All Accounts",
+    "link": "https://alestic.com/2020/01/aws-iam-access-analyzer/",
+    "date": "2020-01-06T08:01:00.000Z"
+  },
+  {
+    "sourceName": "Rhonda D'Vine",
+    "sourceUrl": "https://rhonda.deb.at/blog/?flav=rss&lang=en",
+    "title": "Puberty",
+    "link": "https://rhonda.deb.at/blog/2019/12/28#puberty",
+    "date": "2019-12-28T22:22:00.000Z"
+  },
+  {
+    "sourceName": "Diego Turcios",
+    "sourceUrl": "http://diegoturcios.blogspot.com/feeds/posts/default/-/planet-ubuntu",
+    "title": "Managing dynamic inventory in private subnets using bastion jump box",
+    "link": "http://blog.diegoturcios.com/2019/11/managing-dynamic-inventory-in-private_56.html",
+    "date": "2019-11-19T15:47:00.003Z"
+  },
+  {
+    "sourceName": "Robert Ancell",
+    "sourceUrl": "http://bobthegnome.blogspot.com/feeds/posts/default",
+    "title": "GUADEC 2019 - Thessaloniki",
+    "link": "http://bobthegnome.blogspot.com/2019/09/guadec-2019-thessaloniki.html",
+    "date": "2019-09-04T23:34:00.000Z"
+  },
+  {
+    "sourceName": "Sebastien Bacher",
+    "sourceUrl": "http://blogs.gnome.org/seb128/feed/",
+    "title": "Ubuntu 18.04.3 LTS is out, including GNOME stable updates and Livepatch desktop integration",
+    "link": "https://blogs.gnome.org/seb128/2019/08/08/ubuntu-18-04-3-lts-is-out-and-includes-gnome-bugfix-updates-and-livepatch-desktop-integration/",
+    "date": "2019-08-08T19:32:31.000Z"
+  },
+  {
+    "sourceName": "Thierry Carrez",
+    "sourceUrl": "http://ttx.re/feeds/open-source.atom.xml",
+    "title": "Open source in 2019, Part 3/3",
+    "link": "https://ttx.re/open-source-2019-part3.html",
+    "date": "2019-07-15T13:52:00.000Z"
+  },
+  {
+    "sourceName": "Iain Lane",
+    "sourceUrl": "https://blogs.gnome.org/laney/category/planetubuntu/feed/",
+    "title": "Canonical’s Desktop Team is hiring",
+    "link": "https://blogs.gnome.org/laney/2019/07/02/canonicals-desktop-team-is-hiring/",
+    "date": "2019-07-02T10:43:12.000Z"
+  },
+  {
+    "sourceName": "James Page",
+    "sourceUrl": "https://javacruft.wordpress.com/category/ubuntu/feed/?mrss=off",
+    "title": "OpenStack Stein for Ubuntu 18.04 LTS",
+    "link": "https://javacruft.wordpress.com/2019/04/17/openstack-stein-for-ubuntu-18-04-lts/",
+    "date": "2019-04-17T10:50:17.000Z"
+  },
+  {
+    "sourceName": "Timo Aaltonen",
+    "sourceUrl": "https://tjaalton.wordpress.com/feed/",
+    "title": "Intel NEO OpenCL driver for Disco",
+    "link": "https://tjaalton.wordpress.com/2019/04/09/intel-neo-opencl-driver-for-disco/",
+    "date": "2019-04-09T16:11:30.000Z"
+  },
+  {
+    "sourceName": "Andrew SB",
+    "sourceUrl": "http://blog.andrewsomething.com/feeds/all.atom.xml",
+    "title": "Setting Up a Domain with SSL on DigitalOcean Kubernetes using ExternalDNS and Helm",
+    "link": "//blog.andrewsomething.com/2019/04/04/external-dns-with-ssl-on-k8s/",
+    "date": "2019-04-04T04:00:00.000Z"
+  },
+  {
+    "sourceName": "Marco Trevisan (Treviño)",
+    "sourceUrl": "http://blog.3v1n0.net/tag/planet-ubuntu/feed/",
+    "title": "Resource Scale for Fractional Scaling support in GNOME Shell 3.32",
+    "link": "https://blog.3v1n0.net/informatica/linux/gnome-shell-fractional-scaling-in-wayland-landed/",
+    "date": "2019-03-04T15:17:55.000Z"
+  },
+  {
+    "sourceName": "Scott Kitterman",
+    "sourceUrl": "https://skitterman.wordpress.com/category/Ubuntu/feed/atom",
+    "title": "Rise and fall of libclamav",
+    "link": "https://skitterman.wordpress.com/2019/01/31/rise-and-fall-of-libclamav/",
+    "date": "2019-01-31T06:36:03.000Z"
+  },
+  {
+    "sourceName": "Kurt von Finck",
+    "sourceUrl": "http://blogs.gnome.org/mneptok/feed/",
+    "title": "So I created a subreddit for interesting G+ refugees. Emphasis on interesting.",
+    "link": "https://blogs.gnome.org/mneptok/2019/01/28/so-i-created-a-subreddit-for-interesting-g-refugees-emphasis-on-interesting/",
+    "date": "2019-01-28T20:48:02.000Z"
+  },
+  {
+    "sourceName": "Nathan Haines",
+    "sourceUrl": "https://www.nhaines.com/feed.xml",
+    "title": "Announcing the Ubuntu 18.10 Free Culture Showcase winners",
+    "link": "https://www.nhaines.com/blog/2018/09/28/announcing-ubuntu-18.10-free-culture-showcase-winners/",
+    "date": "2018-09-28T07:00:00.000Z"
+  },
+  {
+    "sourceName": "Alberto Milone",
+    "sourceUrl": "http://albertomilone.com/wordpress/?feed=rss2",
+    "title": "NVIDIA PRIME in Ubuntu 18.04 and 18.10, and a call for testing",
+    "link": "https://albertomilone.com/blog/nvidia-prime-in-ubuntu-18-04-and-18-10-and-a-call-for-testing/",
+    "date": "2018-09-20T09:19:48.000Z"
+  },
+  {
+    "sourceName": "Mathieu Trudel",
+    "sourceUrl": "http://blog.cyphermox.net/feeds/posts/default/-/planet-ubuntu",
+    "title": "Help needed to improve proposed migration",
+    "link": "http://blog.cyphermox.net/2018/09/help-needed-to-improve-proposed.html",
+    "date": "2018-09-20T07:35:00.000Z"
+  },
+  {
+    "sourceName": "Michael Hall",
+    "sourceUrl": "https://mhall119.com/blog/category/planet-ubuntu/feeds/rss/",
+    "title": "Joining the Linux Foundation",
+    "link": "https://mhall119.com/blog/joining-the-linux-foundation/",
+    "date": "2018-07-04T12:56:59.000Z"
+  },
+  {
+    "sourceName": "Jhosman Lizarazo",
+    "sourceUrl": "http://feeds.feedburner.com/Jhosmanenglish",
+    "title": "Flisol Bogotá 2018",
+    "link": "https://jhosman.com/en/locoteams/flisol-bogota-2018/",
+    "date": "2018-05-08T01:49:07.000Z"
+  },
+  {
+    "sourceName": "Chris Coulson",
+    "sourceUrl": "http://www.chriscoulson.me.uk/blog/?feed=rss2&cat=3",
+    "title": "Debugging the debugger",
+    "link": "https://chriscoulson.me.uk/blog/?p=295",
+    "date": "2018-05-02T21:02:46.000Z"
+  },
+  {
+    "sourceName": "Ante Karamatić",
+    "sourceUrl": "http://ivoks.com/category/ubuntu/feed/",
+    "title": "Spaces – uncomplicating your network",
+    "link": "https://ivoks.com/ubuntu/spaces-uncomplicating-your-network/",
+    "date": "2018-04-12T04:44:16.000Z"
+  },
+  {
+    "sourceName": "Carla Sella",
+    "sourceUrl": "http://carla-sella.blogspot.it/rss.xml",
+    "title": "No Title Available",
+    "link": "https://carla-sella.blogspot.com/2018/02/blog-post.html",
+    "date": "2018-02-03T13:50:00.000Z"
+  },
+  {
+    "sourceName": "Chris Glass",
+    "sourceUrl": "https://tribaal.io/feeds/ubuntu",
+    "title": "Magic URLs in the Ubuntu ecosystem",
+    "link": "https://tribaal.io/magic-urls.html",
+    "date": "2017-12-13T09:05:00.000Z"
+  },
+  {
+    "sourceName": "Pasi Lallinaho",
+    "sourceUrl": "http://open.knome.fi/category/ubuntu/feed/",
+    "title": "Preparing for Xubuntu 18.04",
+    "link": "https://open.knome.fi/2017/10/24/preparing-xubuntu-18-04/",
+    "date": "2017-10-24T06:55:22.000Z"
+  },
+  {
+    "sourceName": "Nathan Handler",
+    "sourceUrl": "http://nhandler.com/blog/feed.ubuntu.xml",
+    "title": "freenode #live",
+    "link": "http://nhandler.com/blog/2017/08/26/freenode-live.html",
+    "date": "2017-08-26T00:00:00.000Z"
+  },
+  {
+    "sourceName": "Robie Basak",
+    "sourceUrl": "http://www.justgohome.co.uk/blog/feeds/tag/planet-ubuntu.atom.xml",
+    "title": "More on the imported repositories",
+    "link": "http://www.justgohome.co.uk/blog/2017/08/more-on-the-imported-repositories.html",
+    "date": "2017-08-21T16:53:44.000Z"
+  },
+  {
+    "sourceName": "Ubuntu GNOME",
+    "sourceUrl": "http://ubuntugnome.org/feed/?mrss=off",
+    "title": "Ubuntu GNOME 17.04 Released and What’s Next",
+    "link": "https://ubuntugnome.org/ubuntu-gnome-17-04-released/",
+    "date": "2017-04-13T13:15:08.000Z"
+  },
+  {
+    "sourceName": "Cesar Sevilla",
+    "sourceUrl": "https://cesarsevilla.wordpress.com/category/ubuntu/feed/?mrss=off",
+    "title": "1er Festival Universitario de Tecnologías Libres",
+    "link": "https://cesarsevilla.wordpress.com/2016/10/28/1er-festival-universitario-de-tecnologias-libres/",
+    "date": "2016-10-28T22:09:25.000Z"
+  },
+  {
+    "sourceName": "Myriam Schweingruber",
+    "sourceUrl": "http://blogs.fsfe.org/myriam/?feed=rss2",
+    "title": "A week ago …",
+    "link": "https://blogs.fsfe.org/myriam/2016/06/08/a-week-ago/",
+    "date": "2016-06-08T20:44:39.000Z"
+  },
+  {
+    "sourceName": "Barneedhar",
+    "sourceUrl": "https://unbrokenspectrum.wordpress.com/category/planet-ubuntu/feed/?mrss=off",
+    "title": "Ask Ubuntu moderator election is now underway!",
+    "link": "https://unbrokenspectrum.wordpress.com/2016/06/07/ask-ubuntu-moderator-election-is-now-underway/",
+    "date": "2016-06-07T16:19:04.000Z"
+  },
+  {
+    "sourceName": "Ben Collins",
+    "sourceUrl": "http://feeds.feedburner.com/benmcollins13/ubuntu",
+    "title": "Easy Rake-based Deployment for Git-hosted Rails Apps",
+    "link": "http://ben-collins.blogspot.com/2016/03/easy-rake-based-deployment-for-git.html",
+    "date": "2016-03-25T17:54:00.003Z"
+  },
+  {
+    "sourceName": "Philip Ballew",
+    "sourceUrl": "https://philipballew.wordpress.com/feed/?mrss=off",
+    "title": "Speaking at San Diego Linux users group",
+    "link": "https://philipballew.wordpress.com/2016/03/21/speaking-at-san-diego-linux-users-group/",
+    "date": "2016-03-21T23:31:49.000Z"
+  },
+  {
+    "sourceName": "Mirko Pizii",
+    "sourceUrl": "http://www.mirkopizii.com/category/ubuntu-com-planet/feed/?mrss=off",
+    "title": "Test Android Auto – New Opel Astra [ENG]",
+    "link": "https://www.mirkopizii.com/ubuntu-com-planet/test-android-auto-new-opel-astra-eng/",
+    "date": "2016-01-30T23:00:00.000Z"
+  },
+  {
+    "sourceName": "Adnane Belmadiaf",
+    "sourceUrl": "http://daker.me/feed-ubuntuplanet.xml",
+    "title": "How to Integrate Slack with Launchpad",
+    "link": "https://daker.me/2016/01/how-to-integrate-slack-with-launchpad.html",
+    "date": "2016-01-26T00:00:00.000Z"
+  },
+  {
+    "sourceName": "Walter Lapchynski",
+    "sourceUrl": "http://polka.bike/blog/category/planet-ubuntu/feed/index.xml",
+    "title": "mass subscriptions",
+    "link": "http://polka.bike/blog/mass-subs",
+    "date": "2015-12-11T23:12:44.000Z"
+  },
+  {
+    "sourceName": "Rafał Cieślak",
+    "sourceUrl": "https://rafalcieslak.wordpress.com/category/ubuntu/feed/?mrss=off",
+    "title": "Current progress on AlgAudio",
+    "link": "https://rafalcieslak.wordpress.com/2015/10/06/current-progress-on-algaudio/",
+    "date": "2015-10-06T18:24:20.000Z"
+  },
+  {
+    "sourceName": "Luca Falavigna",
+    "sourceUrl": "https://dktrkranz.wordpress.com/category/planet-ubuntu/feed/atom/",
+    "title": "Resource control with systemd",
+    "link": "https://dktrkranz.wordpress.com/2015/09/02/resource-control-with-systemd/",
+    "date": "2015-09-02T16:31:54.000Z"
+  },
+  {
+    "sourceName": "Benjamin Drung",
+    "sourceUrl": "https://overbenny.wordpress.com/category/planet-ubuntu/feed/atom",
+    "title": "DebConf 15",
+    "link": "https://overbenny.wordpress.com/2015/08/16/debconf-15/",
+    "date": "2015-08-16T11:31:42.000Z"
+  },
+  {
+    "sourceName": "Vincent Untz",
+    "sourceUrl": "http://www.vuntz.net/journal/rss.php?lang=en",
+    "title": "SUSE Ruling the Stack in Vancouver",
+    "link": "https://www.vuntz.net/journal/post/2015/05/26/SUSE-Ruling-the-Stack-in-Vancouver",
+    "date": "2015-05-25T22:58:00.000Z"
+  },
+  {
+    "sourceName": "Mike Rushton",
+    "sourceUrl": "http://leftyfb.com/?feed=rss2&cat=4",
+    "title": "Here’s how to patch Ubuntu 8.04 or anything where you have to build bash from source",
+    "link": "https://leftyfb.com/2014/09/25/heres-how-to-patch-ubuntu-8-04-or-anything-where-you-have-to-build-bash-from-source/",
+    "date": "2014-09-25T17:03:01.000Z"
+  },
+  {
+    "sourceName": "Hajime MIZUNO",
+    "sourceUrl": "http://d.hatena.ne.jp/mizuno-as/rss",
+    "title": "Open Source Conference 2014 Kansai@Kyoto",
+    "link": "https://mizuno-as.hatenadiary.org/entry/20140806/1407307913",
+    "date": "2014-08-06T06:51:53.000Z"
+  },
+  {
+    "sourceName": "Fumihito YOSHIDA",
+    "sourceUrl": "http://fabric-janitor.blogspot.com/feeds/posts/default/-/planet",
+    "title": "Ubuntu 14.04 LTS release party + Offline meeting 14.04 Tokyo",
+    "link": "http://fabric-janitor.blogspot.com/2014/06/a-few-weeks-ago-ubuntu-japanese-team.html",
+    "date": "2014-06-05T03:09:00.000Z"
+  },
+  {
+    "sourceName": "Maia Grotepass",
+    "sourceUrl": "http://my-ubuntu-day.blogspot.com/feeds/posts/default?alt=rss",
+    "title": "Trusty DVD parcels",
+    "link": "http://my-ubuntu-day.blogspot.com/2014/05/trusty-dvd-parcels.html",
+    "date": "2014-05-18T14:21:00.000Z"
+  },
+  {
+    "sourceName": "Ubuntu Classroom",
+    "sourceUrl": "https://ubuntuclassroom.wordpress.com/feed/?mrss=off",
+    "title": "Ubuntu Open Week wrap-up",
+    "link": "https://ubuntuclassroom.wordpress.com/2014/04/25/ubuntu-open-week-wrap-up-2/",
+    "date": "2014-04-25T23:20:49.000Z"
+  },
+  {
+    "sourceName": "Mario Limonciello",
+    "sourceUrl": "http://supermario-world.blogspot.com/feeds/posts/default",
+    "title": "IR Receiver extension for Ambilight raspberry pi clone",
+    "link": "http://supermario-world.blogspot.com/2014/04/ir-receiver-extension-for-ambilight.html",
+    "date": "2014-04-23T05:48:00.002Z"
+  },
+  {
+    "sourceName": "Michael Vogt",
+    "sourceUrl": "https://mvogt.wordpress.com/category/ubuntu/feed/?mrss=off",
+    "title": "apt 1.0",
+    "link": "https://mvogt.wordpress.com/2014/04/04/apt-1-0/",
+    "date": "2014-04-04T14:30:02.000Z"
+  },
+  {
+    "sourceName": "Jackson Doak",
+    "sourceUrl": "https://noskcaj10.wordpress.com/category/ubuntu/feed/?mrss=off",
+    "title": "The Ubuntu PC Case Mod Pt.10 The CPU + Kubuntu stickers",
+    "link": "https://noskcaj10.wordpress.com/2013/12/18/the-ubuntu-pc-case-mod-pt-9-the-cpu-kubuntu-stickers/",
+    "date": "2013-12-18T06:21:44.000Z"
+  },
+  {
+    "sourceName": "Marc Deslauriers",
+    "sourceUrl": "http://mdeslaur.blogspot.com/feeds/posts/default/-/ubuntu-planet",
+    "title": "Ubuntu Touch and User Privacy",
+    "link": "http://mdeslaur.blogspot.com/2013/12/ubuntu-touch-and-user-privacy.html",
+    "date": "2013-12-16T19:25:00.001Z"
+  },
+  {
+    "sourceName": "Aron Xu",
+    "sourceUrl": "http://blogs.gnome.org/happyaron/category/ubuntu/feed/",
+    "title": "Ubuntu Trusty translations are now open",
+    "link": "https://blogs.gnome.org/happyaron/2013/12/14/ubuntu-trusty-translations-are-now-open/",
+    "date": "2013-12-14T08:55:05.000Z"
+  },
+  {
+    "sourceName": "Luca Ferretti",
+    "sourceUrl": "http://blogs.gnome.org/lferrett/feed/",
+    "title": "I Know what You Did This Summer",
+    "link": "https://blogs.gnome.org/lferrett/2013/08/03/i-know-what-you-did-this-summer/",
+    "date": "2013-08-03T20:50:51.000Z"
+  },
+  {
+    "sourceName": "Michael Casadevall",
+    "sourceUrl": "http://ncommander.blogspot.com/feeds/posts/default",
+    "title": "Spanish or Bust: Attaining fluency in 90 days or else ... ",
+    "link": "http://ncommander.blogspot.com/2013/06/spanish-or-bust-attaining-fluency-in-90.html",
+    "date": "2013-06-29T01:38:00.000Z"
+  },
+  {
+    "sourceName": "David Mandala",
+    "sourceUrl": "https://dmtechtalk.wordpress.com/category/ubuntu-2/feed/atom/",
+    "title": "Left Canonical",
+    "link": "https://dmtechtalk.wordpress.com/2013/06/11/left-canonical/",
+    "date": "2013-06-11T15:59:51.000Z"
+  },
+  {
+    "sourceName": "Daniel T Chen",
+    "sourceUrl": "http://drowninginbugs.blogspot.com/feeds/posts/default/-/ubuntu",
+    "title": "Fixing build failures for 13.04",
+    "link": "http://drowninginbugs.blogspot.com/2013/04/fixing-build-failures-for-1304.html",
+    "date": "2013-04-08T19:02:00.001Z"
+  },
+  {
+    "sourceName": "Ryan Kavanagh",
+    "sourceUrl": "http://blog.ryanak.ca/feeds/planet-ubuntu.xml",
+    "title": "Setting up full-disk encryption in OpenBSD 5.3",
+    "link": "/blog/2013-03-26-setting-up-full-disk-encryption-in-openbsd-5.3/",
+    "date": "2013-03-26T13:40:54.000Z"
+  },
+  {
+    "sourceName": "Ahmed Kamal",
+    "sourceUrl": "http://foss-boss.blogspot.com/feeds/posts/default/-/ubuntu-planet",
+    "title": "Bash script self-updates from github",
+    "link": "http://foss-boss.blogspot.com/2013/03/bash-script-self-updates-from-github.html",
+    "date": "2013-03-11T22:07:00.000Z"
+  },
+  {
+    "sourceName": "Dave Morley",
+    "sourceUrl": "http://davmor2.blogspot.com/rss.xml",
+    "title": "I think I have a solution to the rolling and releasing",
+    "link": "http://davmor2.blogspot.com/2013/03/i-think-i-have-solution-to-rolling-and.html",
+    "date": "2013-03-07T23:22:00.000Z"
+  },
+  {
+    "sourceName": "Ken VanDine",
+    "sourceUrl": "http://blogs.gnome.org/kenvandine/category/ubuntu/feed/",
+    "title": "Introducing Friends!",
+    "link": "https://blogs.gnome.org/kenvandine/2013/03/07/introducing-friends/",
+    "date": "2013-03-07T21:46:33.000Z"
+  },
+  {
+    "sourceName": "Philipp Kern",
+    "sourceUrl": "http://www.blogger.com/feeds/5048890463514304208/posts/default/-/planet-ubuntu?alt=rss",
+    "title": "git-annex: encrypted remotes",
+    "link": "https://debblog.philkern.de/2013/03/git-annex-encrypted-remotes.html",
+    "date": "2013-03-03T22:44:00.000Z"
+  },
+  {
+    "sourceName": "Juan Negron",
+    "sourceUrl": "http://blog.xtremeghost.com/feeds/posts/default/-/planet",
+    "title": "Let's shard something",
+    "link": "http://blog.xtremeghost.com/2012/11/lets-shard-something.html",
+    "date": "2012-11-30T07:59:00.000Z"
+  },
+  {
+    "sourceName": "Jonathan Riddell",
+    "sourceUrl": "http://werghdf.blogspot.co.uk/feeds/posts/default",
+    "title": "Kubuntu got Donations, KDE needs Donations",
+    "link": "http://werghdf.blogspot.com/2012/09/kubuntu-got-donations-kde-needs.html",
+    "date": "2012-09-21T13:31:00.003Z"
+  },
+  {
+    "sourceName": "Chris Woollard",
+    "sourceUrl": "http://itigloo.com/category/planet-ubuntu/feed/atom",
+    "title": "UK LoCo Christmas Dinner @ Dans Le Noir",
+    "link": "https://itigloo.com/2011/12/10/uk-loco-christmas-dinner-dans-le-noir/",
+    "date": "2011-12-10T14:36:44.000Z"
+  },
+  {
+    "sourceName": "Julien Lavergne",
+    "sourceUrl": "https://gilir.wordpress.com/tag/planet-ubuntu/feed/atom/",
+    "title": "UDS Day 3",
+    "link": "https://gilir.wordpress.com/2011/11/03/uds-day-3/",
+    "date": "2011-11-03T04:33:54.000Z"
+  },
+  {
+    "sourceName": "Belinda Lopez",
+    "sourceUrl": "https://dindafoss.wordpress.com/category/ubuntu/feed/?mrss=off",
+    "title": "FlossManuals/Google Documentation Summit",
+    "link": "https://dindafoss.wordpress.com/2011/10/18/flossmanualsgoogle-documentation-summit/",
+    "date": "2011-10-18T13:45:26.000Z"
+  },
+  {
+    "sourceName": "Stefano Rivera",
+    "sourceUrl": "http://tumbleweed.org.za/tags/ubuntu/feed",
+    "title": "Ubuntu Global Jam Oneiric",
+    "link": "http://tumbleweed.org.za/2011/09/05/ubuntu-global-jam-oneiric",
+    "date": "2011-09-05T17:22:04.000Z"
+  },
+  {
+    "sourceName": "Sergio Zanchetta",
+    "sourceUrl": "https://primes2h.wordpress.com/category/ubuntu/feed/?mrss=off",
+    "title": "The sooner the better.",
+    "link": "https://primes2h.wordpress.com/2011/06/06/the-sooner-the-better/",
+    "date": "2011-06-06T10:32:19.000Z"
+  },
+  {
+    "sourceName": "László Torma",
+    "sourceUrl": "https://ubuntumug.wordpress.com/category/planet-ubuntu/feed/?mrss=off",
+    "title": "Ubuntu Power Users: first meeting",
+    "link": "https://ubuntumug.wordpress.com/2011/05/27/ubuntu-power-users-first-meeting/",
+    "date": "2011-05-27T13:18:16.000Z"
+  },
+  {
+    "sourceName": "Scott Balneaves",
+    "sourceUrl": "http://ltspthinclient.blogspot.com/atom.xml",
+    "title": "xexit reaches 1.0.  Thanks Juha",
+    "link": "http://ltspthinclient.blogspot.com/2011/03/xexit-reaches-10-thanks-juha.html",
+    "date": "2011-03-29T17:16:00.002Z"
+  },
+  {
+    "sourceName": "Mathias Gug",
+    "sourceUrl": "http://blog.mathiaz.net/feeds/posts/default/-/ubuntu",
+    "title": "Overview of a Puppet Split CA architecture",
+    "link": "http://blog.mathiaz.net/2010/10/overview-of-puppet-split-ca.html",
+    "date": "2010-10-06T17:49:00.001Z"
+  },
+  {
+    "sourceName": "Antonio Sánchez",
+    "sourceUrl": "http://antoniosanchez.wordpress.com/category/planet-ubuntu/feed/atom",
+    "title": "Microsoft takes off the mask",
+    "link": "https://antoniosanchez.wordpress.com/2010/05/04/microsoft-takes-off-the-mask/",
+    "date": "2010-05-04T19:28:01.000Z"
+  },
+  {
+    "sourceName": "Carlos Diener - emonkey",
+    "sourceUrl": "http://blog.diener.li/feed",
+    "title": "Webling und Android",
+    "link": "http://blog.diener.li/allgemein/webling-und-android/",
+    "date": "2009-11-09T14:27:34.000Z"
+  },
+  {
+    "sourceName": "Murat Güneş",
+    "sourceUrl": "https://mgunes.wordpress.com/tag/planet-ubuntu/feed/atom/",
+    "title": "UDS Karmic &#8211; Day One",
+    "link": "https://mgunes.wordpress.com/2009/05/26/uds-karmic-day-one/",
+    "date": "2009-05-26T11:45:43.000Z"
+  },
+  {
+    "sourceName": "Rick Clark",
+    "sourceUrl": "https://dendrobates.wordpress.com/category/Ubuntu/atom",
+    "title": "Next Stop UDS",
+    "link": "https://dendrobates.wordpress.com/2009/05/20/next-stop-uds/",
+    "date": "2009-05-20T13:42:24.000Z"
+  },
+  {
+    "sourceName": "Nicolas Derive",
+    "sourceUrl": "http://kalon33.blogspot.com/feeds/posts/default",
+    "title": "The Way to a new Ubuntu party for the Jaunty Jackalope",
+    "link": "http://kalon33.blogspot.com/2009/05/way-to-new-ubuntu-party-for-jaunty.html",
+    "date": "2009-05-05T16:15:00.011Z"
+  },
+  {
+    "sourceName": "Muhammad Takdir",
+    "sourceUrl": "https://kipas.wordpress.com/category/ubuntu/feed",
+    "title": "Ubuntu Makassar : KoPi Ngoprek 4.4",
+    "link": "https://kipas.wordpress.com/2009/04/26/ubuntu-makassar-kopi-ngoprek-44/",
+    "date": "2009-04-26T14:45:21.000Z"
   }
 ]
