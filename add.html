@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="keywords" content="planet,ubuntu,members">
+    <meta name="robots" content="index, follow">
+    <meta property="og:title" content="Planet Ubuntu" />
+    <meta property="og:description" content="See what's happening around the Ubuntu world" />
+    <title>Planet Ubuntu</title>
+    <link rel="icon" type="image/png" sizes="48x48" href="ubuntu.com/static/favicons/COF-favicon-48x48.png?v=fa3c63f">
+    <link rel="stylesheet" href="https://assets.ubuntu.com/v1/vanilla-framework-version-4.8.0.min.css" />
+</head>
+<body>
+
+<header id="navigation" class="p-navigation is-dark">
+<div class="p-navigation__row--25-75">
+  <div class="p-navigation__banner">
+    <div class="p-navigation__tagged-logo">
+      <a class="p-navigation__link" href="#">
+        <div class="p-navigation__logo-tag">
+          <img class="p-navigation__logo-icon"
+               src="https://assets.ubuntu.com/v1/82818827-CoF_white.svg"
+               alt="" />
+        </div>
+        <span class="p-navigation__logo-title">Planet Ubuntu</span>
+      </a>
+    </div>
+    <a href="#navigation" class="p-navigation__toggle--open" title="menu">Menu</a>
+    <a href="#navigation-closed"
+       class="p-navigation__toggle--close"
+       title="close menu">Close menu</a>
+  </div>
+  <nav class="p-navigation__nav" aria-label="Planet navigation">
+    <ul class="p-navigation__items">
+      <li class="p-navigation__item is-selected">
+        <a class="p-navigation__link" href="index.html">Feeds</a>
+      </li>
+      <li class="p-navigation__item">
+        <a class="p-navigation__link" href="about.html">About</a>
+      </li>
+      <li class="p-navigation__item">
+        <a class="p-navigation__link is-selected" href="add.html">Add your feed</a>
+      </li>
+    </ul>
+  </nav>
+</div>
+</header>
+
+<h1><strong>Add Your Feed to Ubuntu Planet</strong></h1>
+<p>If you’d like to add your blog to Planet Ubuntu, you need only follow a few steps!</p>
+<h3><strong>Prerequisites</strong></h3>
+<ul>
+    <li>
+        <p>Be an official <a target="_blank" rel="noopener noreferrer nofollow" href="https://ubuntu.com/community/docs/membership"><span style="color: rgb(17, 85, 204)"><strong>Ubuntu Member</strong></span></a>
+        </p>
+    </li>
+    <li>
+        <p>A <strong>GitHub Account</strong>.</p>
+    </li>
+    <li>
+        <p>The <strong>exact URL</strong> of your RSS, Atom, or <span style="color: rgb(24, 128, 56)">.xml</span>/<span style="color: rgb(24, 128, 56)">.rss</span> feed (e.g., <a target="_blank" rel="noopener noreferrer nofollow" href="https://your-awesome-blog.com/feed.xml"><span style="color: rgb(24, 128, 56)">https://your-awesome-blog.com/feed.xml</span></a>).</p>
+    </li>
+</ul>
+<p></p>
+<hr>
+<p></p>
+<h2><strong>Step 1:  Fork the Repository</strong></h2>
+<p>First, you need to create your own editable copy of the Ubuntu Planet project.</p>
+<ol>
+    <li>
+        <p>Go to the main repository page: <a target="_blank" rel="noopener noreferrer nofollow" href="https://github.com/aaronprisk/terra"><span style="color: rgb(24, 128, 56)">https://github.com/aaronprisk/terra</span></a>
+        </p>
+    </li>
+    <li>
+        <p>In the top-right corner, click the <strong>"Fork"</strong> button.</p>
+    </li>
+    <li>
+        <p>Choose a name for your fork and click <strong>"Create fork."</strong> This creates a copy of the entire project under your GitHub account (<span style="color: rgb(24, 128, 56)">your-username/terra</span>).</p>
+    </li>
+</ol>
+<p></p>
+<hr>
+<p></p>
+<h2><strong>Step 2:  Edit the </strong><span style="color: rgb(24, 128, 56)"><strong>feeds.json</strong></span><strong> File</strong></h2>
+<p>Now, you can edit the feeds list and add your own:</p>
+<ol>
+    <li>
+        <p>In your newly created fork (<span style="color: rgb(24, 128, 56)">your-username/terra</span>), navigate to the file: <span style="color: rgb(24, 128, 56)"><strong>feeds.json</strong></span> (The full path is <span style="color: rgb(24, 128, 56)">/terra/feeds.json</span>).</p>
+    </li>
+    <li>
+        <p>Click the <strong>pencil icon</strong> (✏️) in the top right of the file view to start editing.</p>
+    </li>
+    <li>
+        <p><strong>Add your feed entry</strong> to the bottom of the list, just before the closing square bracket (<span style="color: rgb(24, 128, 56)">]</span>).</p>
+    </li>
+</ol>
+<h3><strong>Example of Adding a new Planet entry</strong></h3>
+<p>Ensure your new entry follows this structure exactly, separating the <span style="color: rgb(24, 128, 56)">name</span> and <span style="color: rgb(24, 128, 56)">url</span> with a comma, and ending your entry with a comma <strong>unless</strong> it's the very last one.</p>
+<p>JSON</p>
+<p>[</p>
+<p>// ... (Existing entries above)</p>
+<p>{</p>
+<p>"name": "My Awesome Ubuntu Blog",</p>
+<p>"nick": "my-launchpad-id",</p>
+<p>"url": "<a target="_blank" rel="noopener noreferrer nofollow" href="https://my-awesome-blog.com/feed.xml">https://my-awesome-blog.com/feed.xml</a>"</p>
+<p>},</p>
+<p>{</p>
+<p>"name": "Other Cool Ubuntu Blog",</p>
+<p>"nick": "wartywarthog",</p>
+<p>"url": "<a target="_blank" rel="noopener noreferrer nofollow" href="https://ubuntu.com/blog/feed/">https://ubuntu.com/blog/feed/</a>"</p>
+<p>}</p>
+<p>// &lt;-- NOTE: No comma after the very last entry</p>
+<p>]</p>
+<p></p>
+<hr>
+<p></p>
+<h2><strong>Step 3: Commit the Changes</strong></h2>
+<p>After adding your feed to the list, you need to save your changes to your fork.</p>
+<ol>
+    <li>
+        <p>Scroll down to the <strong>"Commit changes"</strong> section at the bottom of the page.</p>
+    </li>
+    <li>
+        <p>Enter a clear <strong>commit message</strong> like: <span style="color: rgb(24, 128, 56)">Add: My Blog Name to feeds.json</span>
+        </p>
+    </li>
+    <li>
+        <p>Ensure the "Commit directly to the <span style="color: rgb(24, 128, 56)">main</span> branch" radio button is selected.</p>
+    </li>
+    <li>
+        <p>Click the green <strong>"Commit changes"</strong> button.</p>
+    </li>
+</ol>
+<p></p>
+<hr>
+<p></p>
+<h2><strong>Step 4: Create a Pull Request (PR)</strong></h2>
+<p>The final step is to submit your change from your fork back to the main repository.</p>
+<ol>
+    <li>
+        <p>Go back to the main page of your fork (<span style="color: rgb(24, 128, 56)">your-username/terra</span>).</p>
+    </li>
+    <li>
+        <p>You should see a highlighted box indicating that your <span style="color: rgb(24, 128, 56)">main</span> branch is ahead of the original. Click the green <strong>"Contribute"</strong> button, and then click <strong>"Open pull request."</strong>
+        </p>
+    </li>
+    <li>
+        <p>Review the changes (it should only show your added lines in <span style="color: rgb(24, 128, 56)">feeds.json</span>).</p>
+    </li>
+    <li>
+        <p>Add a brief <strong>title</strong> and <strong>description</strong> explaining who you are and why you're adding your feed (e.g., "Adding feed for Ubuntu Member John Doe").</p>
+    </li>
+    <li>
+        <p>Click the green <strong>"Create pull request"</strong> button.</p>
+    </li>
+</ol>
+<p>Once your Pull Request is created, it will be reviewed, merged and the automated Planet aggregator will pick it up on the next refresh.</p>
+
+<footer class="p-strip--dark l-docs__subgrid">
+  <div class="l-docs__sidebar">
+    <p style="padding-left: 1.5rem"></p>
+  </div>
+    <div class="l-docs__main">
+        <nav class="row" aria-label="Footer">
+            <div class="has-cookie">
+                <p><a class="is-dark" href="https://ubuntu.com/">Ubuntu</a> and <a class="is-dark" href="https://canonical.com/">Canonical</a> are registered trademarks of Canonical Ltd.</p>
+                <ul class="p-inline-list--middot">
+                    <li class="p-inline-list__item">
+                        <a class="is-dark" href="https://ubuntu.com/legal"><small>Legal information</small></a>
+                    </li>
+                    <li class="p-inline-list__item">
+                        <a class="is-dark" href="https://github.com/aaronprisk/terra"><small>Report a bug on this site</small></a>
+                    </li>
+                </ul>
+                <span class="u-off-screen"><a href="#">Go to the top of the page</a></span>
+            </div>
+        </nav>
+    </div>
+</footer>    
+    <script src="script.js"></script>
+</body>
+</html>
