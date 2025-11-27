@@ -640,14 +640,6 @@
     "snippet": "So I created a subreddit for interesting G+ refugees. Emphasis on interesting."
   },
   {
-    "sourceName": "Nathan Haines",
-    "sourceUrl": "https://www.nhaines.com/feed.xml",
-    "title": "Announcing the Ubuntu 18.10 Free Culture Showcase winners",
-    "link": "https://www.nhaines.com/blog/2018/09/28/announcing-ubuntu-18.10-free-culture-showcase-winners/",
-    "date": "2018-09-28T07:00:00.000Z",
-    "snippet": "October approaches, and Ubuntu marches steadly along the road from one LTS to another.  Ubuntu 18.10 is another step in Ubuntu’s future.  And now it’s time to unveil a small part of that change: the community wallpapers to be included in Ubuntu 18.10!\n\nEvery cycle, talented artists around the world create media and release it under licenses that encourage sharing and adaptation. This cycle we had some amazing images submitted to the Ubuntu 18.10 Free Culture Showcase photo pool on Flickr, where ..."
-  },
-  {
     "sourceName": "Alberto Milone",
     "sourceUrl": "http://albertomilone.com/wordpress/?feed=rss2",
     "title": "NVIDIA PRIME in Ubuntu 18.04 and 18.10, and a call for testing",
