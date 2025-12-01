@@ -20,7 +20,7 @@ jobs:
           token: ${{ secrets.GITHUB_TOKEN }}
       - name: Build subscribable RSS XML from processed JSON
         run: |
-          node scripts/rss-creator.js \
+          node rss-creator.js \
             --in ./feed-data.json \
             --out ./feed.xml \
             --site "https://ubuntu-community-team.github.io/terra/" \
