@@ -6,57 +6,37 @@
     <description>Fresh posts from the Ubuntu Planet</description>
     <language>en</language>
     <generator>json-to-rss (GitHub Actions)</generator>
-    <lastBuildDate>Wed, 10 Dec 2025 01:54:03 GMT</lastBuildDate>
+    <lastBuildDate>Thu, 11 Dec 2025 01:55:28 GMT</lastBuildDate>
     <ttl>60</ttl>
     <atom:link href="https://ubuntu-community-team.github.io/terra//feed.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>How telco companies can reduce 5G infrastructure costs with modern open source cloud-native technologies</title>
-      <link>https://ubuntu.com//blog/how-telco-companies-can-reduce-5g-infrastructure-costs-with-modern-open-source-cloud-native-technologies</link>
-      <guid isPermaLink="true">https://ubuntu.com//blog/how-telco-companies-can-reduce-5g-infrastructure-costs-with-modern-open-source-cloud-native-technologies</guid>
-      <pubDate>Mon, 08 Dec 2025 12:38:38 GMT</pubDate>
-      <description><![CDATA[<p>5G continues to transform the telecommunications landscape, enabling massive device density, edge computing, and new enterprise use cases. However, operators still face significant cost pressures: from accelerating RAN modernization and 5G SA rollouts to energy demands and the shift to cloud-native network functions (CNFs). As telcos redesign their infrastructure strategies, open source has become a key lever to reduce costs, increase flexibility, and accelerate innovation.</p>
-<p>This blog outlines today’s primary 5G infrastructure challenges and highlights how modern open source cloud technologies from Canonical help operators address them.</p>
-<h2 class="wp-block-heading">The telco dilemma: 5G infrastructure challenges</h2>
-<p>With the advancements of 5G and more complex deployments, telcos face several challenges in building and maintaining 5G infrastructure, including:</p>
-<ol>
-<li><strong>High investment costs:</strong> 5G infrastructure requires significant investment in new hardware and software, especially for hosting the virtualization infrastructure necessary to run 5G software</li>
-<li><strong>Rising OPEX and energy costs:</strong> Power consumption of distributed 5G sites is now one of the largest operational expenses.</li>
-<li><strong>Cloud-native complexity:</strong> Moving from virtualized network functions (VNFs) to cloud-native network functions (CNFs) increases the need for Kubernetes-scale automation and observability.</li>
-<li><strong>Disaggregated RAN and multi-vendor integrations:</strong> Open RAN and virtualised RAN require consistent infrastructure, automation and lifecycle management.</li>
-<li><strong>Limited spectrum:</strong> The available spectrum for 5G is limited and highly regulated, which can make it difficult for telcos to acquire and use.</li>
-<li><strong>Edge footprint explosion:</strong> 5G MEC deployments increase the number of sites operators must manage.</li>
-<li><strong>Talent and skills gaps:</strong> Cloud-native and Kubernetes skills remain scarce in telecom operations teams.</li>
-<li><strong>Security:</strong> 5G networks are vulnerable to cyber attacks, which can compromise the security and privacy of users’ data. The attack surface is larger with 5G compared to previous generations of mobile networks.</li>
-<li><strong>Vendor Lock-in:</strong> a telecom operator is heavily dependent on one or a few vendors for all of its 5G network infrastructure and services, making it difficult for the operator to switch to another vendor without incurring significant costs and disruption to its network.</li>
-</ol>
-<h2 class="wp-block-heading">How open source is changing the game</h2>
-<p>Open source plays a central role in enabling telcos to modernise their networks: from VNF virtualization to full cloud-native CNF deployments. By standardizing on open platforms like Ubuntu, Kubernetes and OpenStack, operators reduce infrastructure licensing costs, improve interoperability, and accelerate innovation. Today, most large operators run the majority of their 5G core workloads on open source infrastructure.</p>
-<h3 class="wp-block-heading">Shared standards</h3>
-<p>Open source communities, including CNCF, O-RAN Alliance and Project Sylva, provide common frameworks that reduce integration effort. By adopting open standards, operators can more easily mix vendors and ensure long-term ecosystem interoperability.</p>
-<h3 class="wp-block-heading">Avoid vendor lock-in</h3>
-<p>In line with the development of shared standards, open source solutions can help avoid vendor lock-in by providing access to code that can be modified and adapted to meet specific needs. This means that telcos and ISVs can avoid being tied to a particular vendor or technology stack and choose the best solutions for their specific requirements instead.</p>
-<h3 class="wp-block-heading">Meet specific-telco requirements</h3>
-<p>Telcos have demanding requirements when it comes to performance, reliability, and security. Long-term support (LTS) is important in the telco industry, as telcos often have long cycles of release deployment. Open source solutions that are supported over the long term, with no API breaks or major changes that could disrupt telco operations (i.e. 12-month release at least, and a few years on average) are the foremost choice for telcos. This is usually a vendor-driven decision, but choosing the right open source with the right vendor is the key here. The reason is, it is difficult to have a telco-grade system after dealing with all the interoperability and fixing into the puzzle challenges, so it is reasonable for an operator to expect the support cycle to be as long as possible.</p>
-<p>Performance, flexibility, and automation are key requirements in the telco industry, as they enable telcos to operate more efficiently and effectively. By leveraging the expertise of the wider community, telcos, and ISVs can build solutions that are optimised for telco environments and that can be easily customised to meet specific requirements.</p>
-<h3 class="wp-block-heading">Cost optimization</h3>
-<p>Open source software offers cost savings compared to proprietary solutions, which can be especially beneficial for organizations with limited budgets. With open source software, organizations do not need to pay for licenses, and there are no vendor lock-ins. They can leverage the vast community of developers and users to troubleshoot issues and implement new features. In addition to removing licensing fees, open source automation frameworks significantly reduce operational costs by simplifying CNF lifecycle management, improving energy optimization, and enabling consistent operations across core, edge and RAN deployments.</p>
-<h3 class="wp-block-heading">Security</h3>
-<p>The telecom sector handles a vast amount of sensitive information, including personal and financial data, making it a prime target for cyber-attacks. There are several data privacy and security concerns that the telecom sector faces, including data breaches, malware attacks, insider threats, lack of compliance, etc. In this regard, open source software vulnerabilities are often patched more quickly than with proprietary software. In addition, open source software is transparent and customisable, making it easier to meet the operator’s unique needs and implement security features that align with their security requirements.</p>
-<p>In the sections that follow we provide example applications for open source solutions across the telco stack, with a focus on tooling supported by Canonical.</p>
-<h2 class="wp-block-heading">Open source solutions for telcos</h2>
-<p>Canonical’s telco portfolio spans the entire network – from RAN compute nodes to edge clouds, MEC platforms, private clouds and public-cloud deployments. Ubuntu and our cloud-native infrastructure stack (MAAS, MicroCloud, OpenStack, Kubernetes and Juju) provide a consistent operational model across all layers of the 5G architecture.. This enables telcos to meet any current or future use cases – from OpenRAN to next-generation Core (5G and beyond) and AI at the edge. <a href="https://ubuntu.com/pro">Ubuntu Pro</a> is Canonical’s comprehensive subscription for enterprise security, compliance and support.</p>
-<p class="has-text-align-center has-small-font-size"><img decoding="async" height="404" loading="lazy" src="blob:https://admin.insights.ubuntu.com/7992c784-e5d4-4e93-9690-7104aa776539" width="588"/><br/>Open source solutions for telcos</p>
-<h3 class="wp-block-heading">Open source for RAN</h3>
-<p>vRAN and Open RAN deployments require high performance, low latency and hardware acceleration. Canonical works closely with <a href="https://builders.intel.com/docs/networkbuilders/network-and-cloud-edge-reference-system-architecture-with-flexran-software-setup-on-a-single-server-quick-start-guide-1658491779.pdf">Intel FlexRAN</a>, NVIDIA Aerial and ARM ecosystem partners to optimize Ubuntu for RAN workloads.</p>
-<p>Another major Canonical contribution for RANs edge use cases is<a href="https://ubuntu.com/engage/guide-to-micro-clouds"> MicroCloud,</a> which reproduces the APIs and primitives of the big clouds at the scale of the edge. MicroClouds are typically targeted to easily deploy and lifecycle manage distributed micro clouds – bare metal compute clusters of between 3-100 nodes. A Canonical MicroCloud stack consists of certain building blocks. The details for each component are covered in our Telco 5G infrastructure<a href="https://ubuntu.com/engage/telco-dilemma-reduce-5g-infra-cost"> whitepaper.</a></p>
-<h3 class="wp-block-heading">Open source for core networks</h3>
-<p>Most operators deploy their 5G Core on private clouds to maintain strict performance and security control. Canonical’s reference architecture – <a href="https://canonical.com/maas">MAAS</a> for bare metal, <a href="https://canonical.com/openstack">OpenStack</a> for virtualised infrastructure, <a href="https://ubuntu.com/kubernetes">Kubernetes</a> for CNFs, and <a href="https://canonical.com/juju">Juju</a> for automation – provides a proven, carrier-grade cloud foundation adopted by major network equipment providers (NEPs) and operators globally.</p>
-<p class="has-text-align-center has-small-font-size"><img decoding="async" height="416" loading="lazy" src="blob:https://admin.insights.ubuntu.com/6db34da1-e968-4e98-9b89-9477bd901677" width="624"/><br/>Canonical stack for private clouds</p>
-<h4 class="wp-block-heading">Open source for public and hybrid clouds</h4>
-<p>Ubuntu is known for its reliability, security, and versatility, making it a popular choice for telecom companies that require a stable and secure operating system to run Telco applications in the public cloud. A hybrid cloud architecture combines the usage of a private cloud and one or more public cloud services with a workload orchestration engine between the platforms. Using Juju, operators can orchestrate and lifecycle-manage the same CNF or VNF stack across private OpenStack, MicroCloud edge clusters, and hyperscalers. Juju automation provides a consistent approach that natively supports all major hyper scalers APIs and is a de-facto standard tool for MicroClouds in edge use cases. Additionally, Ubuntu Pro for Public Clouds provides telcos with capabilities based on their unique requirements. Details of these requirements and features from Ubuntu are given in this blog series:<a href="https://ubuntu.com/blog/public-clouds-for-telco-amazon-web-services"> Amazon Web services (AWS)</a>,<a href="https://ubuntu.com/blog/public-cloud-for-telco-part-2-google-cloud-platform"> Google Cloud Platform (GCP)</a>, and<a href="https://ubuntu.com/blog/public-cloud-for-telco-part-3-microsoft-azure"> Microsoft Azure.</a></p>
-<h3 class="wp-block-heading">Wrapping up</h3>
-<p>5G infrastructure modernization continues to introduce new operational and cost challenges. Open source cloud technologies, combined with Canonical’s automation and long-term support, help operators simplify their architectures, reduce OPEX, and accelerate the shift to cloud-native 5G.</p>
-<p>To explore the latest best practices, <a href="https://canonical.com/solutions/telco#get-in-touch">speak with our telco specialists</a>.</p>]]></description>
+      <title>Canonical to distribute AMD ROCm AI/ML and HPC libraries in Ubuntu</title>
+      <link>https://ubuntu.com//blog/canonical-amd-rocm-ai-ml-hpc-libraries</link>
+      <guid isPermaLink="true">https://ubuntu.com//blog/canonical-amd-rocm-ai-ml-hpc-libraries</guid>
+      <pubDate>Tue, 09 Dec 2025 17:38:05 GMT</pubDate>
+      <description><![CDATA[<p>Canonical is pleased to announce an expanded collaboration with AMD to package and maintain AMD ROCm™ software directly in Ubuntu. AMD ROCm is an open software ecosystem to enable hardware-accelerated AI/ML and HPC workloads on AMD Instinct™ and AMD Radeon™ GPUs, simplifying the deployment of AI infrastructure with long term support from Canonical.</p>
+<p>Canonical has formed a dedicated team of engineers to package the AMD ROCm software libraries to streamline installation, support, and long-term maintenance on Ubuntu. Canonical will also submit these packages for consideration in Debian.</p>
+<p>This work will simplify the delivery of AMD AI solutions in data centers, workstations, laptops, Windows Subsystem for Linux, and edge environments. AMD ROCm software will be available as a dependency for any Debian package, snap, or Docker image (OCI) build.  Performance fixes and security patches will automatically be available to production systems.</p>
+<p>This collaboration aims to make AMD ROCm software available in Ubuntu starting with Ubuntu 26.04 LTS, with updates available in every subsequent Ubuntu release.  </p>
+<h2 class="wp-block-heading">AMD ROCm software: a commitment to open source </h2>
+<p>Canonical works with silicon industry leaders to incorporate the software libraries and drivers that accelerate applications on their silicon directly into Ubuntu. Comprehensive support for the latest silicon dramatically accelerates developer adoption and production deployments. </p>
+<p>For AMD, the software that enables hardware-accelerated AI processing is called ROCm. It is an open software platform that includes runtimes, compilers, libraries, kernel components, and drivers that together accelerate industry standard frameworks such as PyTorch, Tensorflow, Jax, and more on supported AMD GPUs and APUs. </p>
+<p>“AMD ROCm software enables open, high-performance acceleration for AI and HPC on AMD hardware. Working with Canonical to package AMD ROCm for Ubuntu makes it easier for developers and enterprises to deploy AMD solutions on supported systems,” said Andrej Zdravkovic, Senior Vice President, GPU Technologies and Engineering Software and Chief Software Officer at AMD.     </p>
+<p>Packaging AMD ROCm in Ubuntu underscores the strong AMD commitment to developer experience and enterprise experience:</p>
+<ul>
+<li>Simpler installation with ‘apt install rocm’ or as an automatic dependency for other projects, like ollama-amd.</li>
+<li>Both stable LTS and fresh ROCm versions every six months will be available, to ensure immediate support for the latest hardware and software.</li>
+<li>Easy security fixes and performance improvements (just “apt upgrade”).</li>
+<li>Up to 15 years of support for AMD ROCm in Ubuntu LTS versions under Ubuntu Pro. </li>
+<li>Personal Ubuntu Pro subscriptions are free.</li>
+</ul>
+<p>“We are delighted to work alongside AMD and the community to package AMD ROCm libraries directly into Ubuntu,” said Cindy Goldberg, SVP of Silicon and Cloud Alliances at Canonical. “This will simplify the use of AMD hardware and software for AI workloads, and enable organizations to meet security and maintenance requirements for production use at scale.”</p>
+<h2 class="wp-block-heading">Improved hardware support</h2>
+<p>Canonical works closely with hardware manufactures to test, optimize, and certify Ubuntu for their devices, and to integrate the required software drivers and kernel patches to support that hardware. Thanks to this extensive hardware program, Ubuntu runs equally well on laptops, workstations, servers, and IoT/edge devices, and developers have a seamless path from development through to deployment.</p>
+<ul>
+<li>Learn more about <a href="https://canonical.com/partners/silicon">Canonical’s silicon partnerships</a></li>
+<li><a href="https://www.amd.com/en/products/software/rocm.html">Read about AMD ROCm software</a></li>
+</ul>]]></description>
       <source url="https://ubuntu.com/blog/feed/">Ubuntu Blog</source>
     </item>
     <item>
@@ -2472,6 +2452,33 @@ sudo chimg --log-console chrootfs config.yaml /tmp/chimg-noble
       <source url="https://joseeantonior.wordpress.com/category/planet-ubuntu/feed/atom">José Antonio Rey</source>
     </item>
     <item>
+      <title>Attitudes on privacy and tracking</title>
+      <link>https://s3hh.wordpress.com/2025/05/25/attitudes-on-privacy-and-tracking/</link>
+      <guid isPermaLink="true">https://s3hh.wordpress.com/2025/05/25/attitudes-on-privacy-and-tracking/</guid>
+      <pubDate>Sun, 25 May 2025 13:00:15 GMT</pubDate>
+      <description><![CDATA[<p>It&#8217;s amazing how quickly public opinion changes. Or, how quickly<br />
+people cave. Remember just 10 years ago, how people felt about<br />
+google glass?</p>
+<ul>
+<li><a href="https://www.businessinsider.com/i-was-assaulted-for-wearing-google-glass-2014-4" rel="nofollow">https://www.businessinsider.com/i-was-assaulted-for-wearing-google-glass-2014-4</a></li>
+<li><a href="https://www.youtube.com/watch?v=m8coAuWZL20" rel="nofollow">https://www.youtube.com/watch?v=m8coAuWZL20</a></li>
+</ul>
+<p>Or how they felt when they found out target was analyzing their<br />
+purchases and perhaps knew them better than themselves or their<br />
+family?</p>
+<ul>
+<li><a href="https://techland.time.com/2012/02/17/how-target-knew-a-high-school-girl-was-pregnant-before-her-parents/" rel="nofollow">https://techland.time.com/2012/02/17/how-target-knew-a-high-school-girl-was-pregnant-before-her-parents/</a></li>
+<li><a href="https://www.forbes.com/sites/kashmirhill/2012/02/16/how-target-figured-out-a-teen-girl-was-pregnant-before-her-father-did/" rel="nofollow">https://www.forbes.com/sites/kashmirhill/2012/02/16/how-target-figured-out-a-teen-girl-was-pregnant-before-her-father-did/</a></li>
+</ul>
+<p>People used to worry about being tracked by companies and government.<br />
+Today, they feel insecure unless they are certain they are being<br />
+tracked. For their own well-being of course. If an online store does<br />
+*not* send an email 10 hours after you&#8217;ve &#8220;left items in your cart,<br />
+don&#8217;t miss out!&#8221;, and another the next day, you feel disappointed. I<br />
+believe they&#8217;re now seen as sub-par.</p>]]></description>
+      <source url="https://s3hh.wordpress.com/feed/?mrss=off">Serge Hallyn</source>
+    </item>
+    <item>
       <title>Rooming with Mark</title>
       <link>https://ograblog.wordpress.com/2025/05/16/rooming-with-mark/</link>
       <guid isPermaLink="true">https://ograblog.wordpress.com/2025/05/16/rooming-with-mark/</guid>
@@ -3280,14 +3287,6 @@ here’s my approach and a bit of motivation</p>
       <pubDate>Wed, 18 Dec 2024 17:43:00 GMT</pubDate>
       <description><![CDATA[<p>Last week I was bitten by a interesting C feature. The following terminate function was expected to exit if okay was zero (false) however it exited when zero was passed to it. The reason is the missing semicolon after the return function.<br /></p><p style="text-align: center;">&nbsp;<a href="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEg5XsE4Yu_I1eR6AWu2lqrFg8fxaCPSapkZB6zAdASbARwqGZuoqE80Eqm97Hm7biYIZ7rjcgJtpwPMUniOKms_bcOqtRVO07JSno8Im1z9y5qgPkQ-I-Zl5Pwe0WerXyHBzevSbEHAu7s9m_YonDxEpwxZ3B47wxnKdsGSaP58iuoc5w7Ef0q5ozMdSAYt/s354/void-return.png" imageanchor="1" style="margin-left: 1em; margin-right: 1em;"><img border="0" data-original-height="354" data-original-width="341" height="320" src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEg5XsE4Yu_I1eR6AWu2lqrFg8fxaCPSapkZB6zAdASbARwqGZuoqE80Eqm97Hm7biYIZ7rjcgJtpwPMUniOKms_bcOqtRVO07JSno8Im1z9y5qgPkQ-I-Zl5Pwe0WerXyHBzevSbEHAu7s9m_YonDxEpwxZ3B47wxnKdsGSaP58iuoc5w7Ef0q5ozMdSAYt/s320/void-return.png" width="308" /></a></p><p style="text-align: left;">The interesting part this that is compiles fine because the void function terminate is allowed to return the void return value, in this case the void return from exit(). <br /></p><p style="text-align: left;">&nbsp;<br /></p>]]></description>
       <source url="http://smackerelofopinion.blogspot.com/feeds/posts/default">Colin King</source>
-    </item>
-    <item>
-      <title>Atomfs presented at OCI weekly discussion</title>
-      <link>https://s3hh.wordpress.com/2024/12/14/atomfs-presented-at-oci-weekly-discussion/</link>
-      <guid isPermaLink="true">https://s3hh.wordpress.com/2024/12/14/atomfs-presented-at-oci-weekly-discussion/</guid>
-      <pubDate>Sat, 14 Dec 2024 03:52:06 GMT</pubDate>
-      <description><![CDATA[OCI (open container initiative) images are the standard format based on<br />the original docker format.  Each container image is represented as an<br />array of &#8216;layers&#8217;, each of which is a .tar.gz.  To unpack the container<br />image, untar the first, then untar the second on top of the first, etc.<br /><br />Several years ago, while we were working on a product which ships its<br />root filesystem (and of course containers) as OCI layers, Tycho Andersen<br />(<a href="https://tycho.pizza/" rel="nofollow">https://tycho.pizza/</a>) came up with the idea of &#8216;atomfs&#8217; as a way to<br />avoid some of the deficiencies of tar<br />(<a href="https://www.cyphar.com/blog/post/20190121-ociv2-images-i-tar" rel="nofollow">https://www.cyphar.com/blog/post/20190121-ociv2-images-i-tar</a>).  In<br />&#8216;atomfs&#8217;, the .tar.gz layers are replaced by squashfs (now optionally<br />erofs) filesystems with dm-verity root hashes specified.  Mounting an<br />image now consists of mounting each squashfs, then merging them with<br />overlay.  Since we have the dmverity root hash, we can ensure that the<br />filesystem has not been corrupted without having to checksum the files<br />before mounting, and there is no tar unpacking step.<br /><br />This past week, Ram Chinchani presented atomfs at the OCI weekly<br />discussion, which you can see here<br /><a href="https://www.youtube.com/watch?v=CUyH319O9hM" rel="nofollow">https://www.youtube.com/watch?v=CUyH319O9hM</a> starting at about 28<br />minutes.  He showed a full use cycle, starting with a Dockerfile,<br />building atomfs images using stacker, mounting them using atomfs, and<br />then executing a container with lxc.  Ram mentioned his goal is to have<br />a containerd snapshotter for atomfs soon.  I&#8217;m excited to hear that, as<br />it will make it far easier to integrate into e.g.  kubernetes.<br /><br />Exciting stuff!<br />]]></description>
-      <source url="https://s3hh.wordpress.com/feed/?mrss=off">Serge Hallyn</source>
     </item>
     <item>
       <title>2024 LiveCD Memory Usage Compare</title>
