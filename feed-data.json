@@ -1,5 +1,22 @@
 [
   {
+    "sourceName": "Dougie Richardson",
+    "sourceUrl": "https://dougiewougie.com/category/linux/feed/",
+    "title": "Shell features: List expansion",
+    "link": "https://dougiewougie.com/linux/shell-features-list-expansion/",
+    "date": "2026-01-11T16:29:07.000Z",
+    "snippet": "I like list expansion:\n\n\n\n# Create mutiple directories\nmkdir -p {src,data,app/{mobile,web}}\n\n\n\nThe p switch creates any &#8220;missing&#8221; parent directories and is idempotent (so if app exists it doesn&#8217;t complain and if not creates it).\n\n\n\n# Create multiple files\ntouch file_{1..5}.txt\n\n\n\nHeck you can even combine it with tee!\n\n\n\n# Create multiple Hello, World! files\necho \"Hello, world\\!\" | tee file_{1..5}.txt",
+    "contentHtml": "<p>I like list expansion:</p>\n\n\n\n<pre class=\"wp-block-code\"><code lang=\"bash\" class=\"language-bash\"># Create mutiple directories\nmkdir -p {src,data,app/{mobile,web}}</code></pre>\n\n\n\n<p>The <code>p</code> switch creates any &#8220;missing&#8221; parent directories and is idempotent (so if app exists it doesn&#8217;t complain and if not creates it).</p>\n\n\n\n<pre class=\"wp-block-code\"><code lang=\"bash\" class=\"language-bash\"># Create multiple files\ntouch file_{1..5}.txt</code></pre>\n\n\n\n<p>Heck you can even combine it with tee!</p>\n\n\n\n<pre class=\"wp-block-code\"><code lang=\"bash\" class=\"language-bash\"># Create multiple Hello, World! files\necho \"Hello, world\\!\" | tee file_{1..5}.txt</code></pre>\n\n\n\n<figure class=\"wp-block-image size-large\"><img fetchpriority=\"high\" decoding=\"async\" width=\"1024\" height=\"622\" src=\"https://dougiewougie.com/wp-content/uploads/2026/01/image-7-1024x622.png\" alt=\"\" class=\"wp-image-3224\" srcset=\"https://dougiewougie.com/wp-content/uploads/2026/01/image-7-1024x622.png 1024w, https://dougiewougie.com/wp-content/uploads/2026/01/image-7-300x182.png 300w, https://dougiewougie.com/wp-content/uploads/2026/01/image-7-768x467.png 768w, https://dougiewougie.com/wp-content/uploads/2026/01/image-7-1536x934.png 1536w, https://dougiewougie.com/wp-content/uploads/2026/01/image-7-2048x1245.png 2048w\" sizes=\"(max-width: 1024px) 100vw, 1024px\" /></figure>",
+    "author": "admin",
+    "categories": [
+      "Linux",
+      "Fedora",
+      "Snippet",
+      "zsh"
+    ],
+    "imageUrl": null
+  },
+  {
     "sourceName": "Scarlett Gately Moore",
     "sourceUrl": "https://www.scarlettgatelymoore.dev/category/open-source-software/feed/",
     "title": "I love KDE too much to retire! Snap beta releases trickling in. Stay tuned.",
@@ -47,22 +64,6 @@
     "author": null,
     "categories": [],
     "imageUrl": "https://hub.podcastubuntuportugal.org/s/fxtTY6KXypLwMnS/download/e370.mp3"
-  },
-  {
-    "sourceName": "Dougie Richardson",
-    "sourceUrl": "https://dougiewougie.com/category/linux/feed/",
-    "title": "Update IONOS SSL certificates in Plesk",
-    "link": "https://dougiewougie.com/linux/update-ionos-ssl-certificates-in-plesk/",
-    "date": "2026-01-07T21:14:53.000Z",
-    "snippet": "Ionos has changed how they manage SSL certificates, cut a long story short you need to create a PEM file.\n\n\n\nFrom Ionos Control Panel, go to Domains and SSL > Certificates. If it isn&#8217;t already then under Advanced Settings > Change Usage. Once the private key is downloaded, download the certificate and intermediate certificates.\n\n\n\n\n\n\n\nWe need to combine these files into a single file, here&#8217;s a script to do so:\n\n\n\n#!/bin/bash\n\n# Configuration\nOUTPUT_FILE=\"combined_certificate.pem\"\nZIP...",
-    "contentHtml": "<p>Ionos has changed how they manage SSL certificates, cut a long story short you need to create a PEM file.</p>\n\n\n\n<p>From Ionos Control Panel, go to Domains and SSL > Certificates. If it isn&#8217;t already then under Advanced Settings > Change Usage. Once the private key is downloaded, download the certificate and intermediate certificates.</p>\n\n\n\n<figure class=\"wp-block-image size-large\"><img fetchpriority=\"high\" decoding=\"async\" width=\"1024\" height=\"314\" src=\"https://dougiewougie.com/wp-content/uploads/2026/01/image-1-1024x314.png\" alt=\"\" class=\"wp-image-3205\" srcset=\"https://dougiewougie.com/wp-content/uploads/2026/01/image-1-1024x314.png 1024w, https://dougiewougie.com/wp-content/uploads/2026/01/image-1-300x92.png 300w, https://dougiewougie.com/wp-content/uploads/2026/01/image-1-768x236.png 768w, https://dougiewougie.com/wp-content/uploads/2026/01/image-1.png 1486w\" sizes=\"(max-width: 1024px) 100vw, 1024px\" /></figure>\n\n\n\n<p>We need to combine these files into a single file, here&#8217;s a script to do so:</p>\n\n\n\n<pre class=\"wp-block-code\"><code lang=\"bash\" class=\"language-bash\">#!/bin/bash\n\n# Configuration\nOUTPUT_FILE=\"combined_certificate.pem\"\nZIP_FILE=$(ls *.zip 2>/dev/null | head -n 1) # Assumes there is one zip file\n\n# 1. Clean up any previous attempts\nrm -f \"$OUTPUT_FILE\"\n\necho \"--- Starting PEM creation process ---\"\n\n# 2. Unzip intermediate certificates\nif [ -f \"$ZIP_FILE\" ]; then\n    echo \"Unzipping $ZIP_FILE...\"\n    # -j (junk paths) unzips files into the current directory without creating subfolders\n    unzip -j \"$ZIP_FILE\" \"intermediate*.cer\" -d .\nelse\n    echo \"Error: No zip file found for intermediates.\"\n    exit 1\nfi\n\n# 3. Identify the primary files\nPRIVATE_KEY=$(ls *_private_key.key 2>/dev/null | head -n 1)\nSSL_CERT=$(ls *_ssl_certificate.cer 2>/dev/null | head -n 1)\n\n# Validate files exist\nif [ -z \"$PRIVATE_KEY\" ] || [ -z \"$SSL_CERT\" ]; then\n    echo \"Error: Private key or SSL certificate file not found.\"\n    exit 1\nfi\n\necho \"Using Private Key: $PRIVATE_KEY\"\necho \"Using SSL Certificate: $SSL_CERT\"\n\n# 4. Concatenate in the specific order\necho \"Concatenating files...\"\n\n# Add Private Key\ncat \"$PRIVATE_KEY\" > \"$OUTPUT_FILE\"\n# Add a newline as file doesn't end with one\necho \"\" >> \"$OUTPUT_FILE\"\n\n# Add SSL Certificate\ncat \"$SSL_CERT\" >> \"$OUTPUT_FILE\"\n\n# 5. Add Intermediate Certificates in numerical order\n# sort -V (version sort) ensures intermediate10.cer comes after intermediate2.cer\nINTERMEDIATES=$(ls intermediate*.cer 2>/dev/null | sort -V)\n\nif [ -n \"$INTERMEDIATES\" ]; then\n    for file in $INTERMEDIATES; do\n        echo \"Adding $file...\"\n        cat \"$file\" >> \"$OUTPUT_FILE\"\n    done\nelse\n    echo \"Warning: No intermediate certificates found after unzipping.\"\nfi\n\necho \"--- Process Complete ---\"\necho \"Result saved to: $OUTPUT_FILE\"</code></pre>\n\n\n\n<p>Then upload the pem file to Plesk under Tools &amp; Settings > SSL/TLS Certificates:</p>\n\n\n\n<figure class=\"wp-block-image size-large\"><img decoding=\"async\" width=\"1024\" height=\"253\" src=\"https://dougiewougie.com/wp-content/uploads/2026/01/image-2-1024x253.png\" alt=\"\" class=\"wp-image-3206\" srcset=\"https://dougiewougie.com/wp-content/uploads/2026/01/image-2-1024x253.png 1024w, https://dougiewougie.com/wp-content/uploads/2026/01/image-2-300x74.png 300w, https://dougiewougie.com/wp-content/uploads/2026/01/image-2-768x190.png 768w, https://dougiewougie.com/wp-content/uploads/2026/01/image-2.png 1523w\" sizes=\"(max-width: 1024px) 100vw, 1024px\" /></figure>\n\n\n\n<p> Finally,  remember to attach the certificate to each site (Websites &amp; Domains > Your Domain Name > Hosting &amp; DNS > Certificate).</p>\n\n\n\n<figure class=\"wp-block-image size-full\"><img decoding=\"async\" width=\"772\" height=\"281\" src=\"https://dougiewougie.com/wp-content/uploads/2026/01/image-3.png\" alt=\"\" class=\"wp-image-3207\" srcset=\"https://dougiewougie.com/wp-content/uploads/2026/01/image-3.png 772w, https://dougiewougie.com/wp-content/uploads/2026/01/image-3-300x109.png 300w, https://dougiewougie.com/wp-content/uploads/2026/01/image-3-768x280.png 768w\" sizes=\"(max-width: 772px) 100vw, 772px\" /></figure>",
-    "author": "admin",
-    "categories": [
-      "Linux",
-      "IONOS",
-      "Plesk"
-    ],
-    "imageUrl": null
   },
   {
     "sourceName": "Stuart Langridge",
