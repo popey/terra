@@ -24,8 +24,8 @@ jobs:
             --in ./feed-data.json \
             --out ./feed.xml \
             --site "https://ubuntu-community-team.github.io/terra/" \
-            --title "Ubuntu Planet" \
-            --desc "Fresh posts from the Ubuntu Planet" \
+            --title "Planet Ubuntu" \
+            --desc "Fresh posts from the Planet Ubuntu" \
             --lang "en" \
             --limit 200
 
