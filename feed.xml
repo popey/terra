@@ -6,9 +6,77 @@
     <description>Fresh posts from the Planet Ubuntu</description>
     <language>en</language>
     <generator>json-to-rss (GitHub Actions)</generator>
-    <lastBuildDate>Fri, 23 Jan 2026 00:29:11 GMT</lastBuildDate>
+    <lastBuildDate>Sat, 24 Jan 2026 00:28:12 GMT</lastBuildDate>
     <ttl>60</ttl>
     <atom:link href="https://ubuntu-community-team.github.io/terra//feed.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>How to avoid package End of Life through backporting </title>
+      <link>https://ubuntu.com//blog/how-to-avoid-package-end-of-life-through-backporting</link>
+      <guid isPermaLink="true">https://ubuntu.com//blog/how-to-avoid-package-end-of-life-through-backporting</guid>
+      <pubDate>Fri, 23 Jan 2026 09:15:20 GMT</pubDate>
+      <description><![CDATA[<p>In July 2025, git received <a href="https://ubuntu.com/security/CVE-2025-48384">CVE-2025-48384</a>, a high vulnerability allowing arbitrary code execution when cloning repositories. The US Cybersecurity and Infrastructure Security Agency added it to their Known Exploited Vulnerabilities catalog after confirming active exploitation in the wild.</p>
+<p>If your Ubuntu system had already passed the End of Standard Support when this vulnerability was disclosed, you faced a choice: subscribe to Ubuntu Pro for the security patch, or continue running git with a known remote code execution vulnerability on your developer workstations and CI/CD infrastructure. </p>
+<p>This scenario highlights a critical decision point: how do you maintain security when packages lose standard support? This blog explores your options and how Canonical’s backporting strategy helps you stay protected. </p>
+<h2 class="wp-block-heading">The impact of End of Standard Support</h2>
+<p>Support lifecycle directly affects your system security. Although Canonical maintains LTS releases for extended periods, there inevitably comes a point where decisions are required to avoid running unsecured packages.</p>
+<p>When Ubuntu 20.04 LTS reached End of Standard Support in April 2025, thousands of packages in the main repository lost free security maintenance. A typical enterprise server runs around 800 packages, which almost guarantees that some packages will no longer be covered by free security updates.</p>
+<h2 class="wp-block-heading">Understanding End of Standard Support vs End of Life</h2>
+<p>Here’s what many users misunderstand: End of Standard Support and End of Life are different concepts for Canonical built and supported packages.</p>
+<p>Canonical provides two types of security coverage. The first is standard security maintenance, which lasts 5 years and provides free security updates for packages in the main repository only. Universe repository packages never receive free security updates, even during this period.</p>
+<p>After 5 years, main repository packages stop receiving free updates but remain functional. Security patches continue to be developed and released for another 10 years through Ubuntu Pro subscriptions, the second type of coverage, covering both main and universe repositories.</p>
+<p>End of Life occurs at the 15-year mark, when the Ubuntu Pro period with legacy add-on concludes. Only then do security patches stop being developed entirely.</p>
+<figure class="wp-block-image size-full"><img alt="" height="314" loading="lazy" sizes="(min-width: 917px) 917px, 100vw" src="https://res.cloudinary.com/canonical/image/fetch/f_auto,q_auto,fl_sanitize,c_fill,w_917/https%3A%2F%2Fubuntu.com%2Fwp-content%2Fuploads%2Fbba5%2Flidia-random-slides.png" srcset="https://res.cloudinary.com/canonical/image/fetch/f_auto,q_auto,fl_sanitize,c_fill,w_460/https%3A%2F%2Fubuntu.com%2Fwp-content%2Fuploads%2Fbba5%2Flidia-random-slides.png 460w, https://res.cloudinary.com/canonical/image/fetch/f_auto,q_auto,fl_sanitize,c_fill,w_620/https%3A%2F%2Fubuntu.com%2Fwp-content%2Fuploads%2Fbba5%2Flidia-random-slides.png 620w, https://res.cloudinary.com/canonical/image/fetch/f_auto,q_auto,fl_sanitize,c_fill,w_1036/https%3A%2F%2Fubuntu.com%2Fwp-content%2Fuploads%2Fbba5%2Flidia-random-slides.png 1036w, https://res.cloudinary.com/canonical/image/fetch/f_auto,q_auto,fl_sanitize,c_fill,w_1681/https%3A%2F%2Fubuntu.com%2Fwp-content%2Fuploads%2Fbba5%2Flidia-random-slides.png 1681w, https://res.cloudinary.com/canonical/image/fetch/f_auto,q_auto,fl_sanitize,c_fill,w_917/https%3A%2F%2Fubuntu.com%2Fwp-content%2Fuploads%2Fbba5%2Flidia-random-slides.png 917w" width="917"/></figure>
+<p>If you’re running Ubuntu and want to check your current support status, you can easily do this via the terminal:</p>
+<pre class="wp-block-code"><code>pro security-status</code></pre>
+<p>This shows which packages have active security coverage and which represent potential vulnerability exposure in your infrastructure.</p>
+<h2 class="wp-block-heading">What are the actual risks?</h2>
+<p>The dependency problem significantly compounds the risk. When package A depends on package B, which depends on package C, an unsupported package anywhere in that chain creates vulnerability across your entire stack. <a href="https://www.endorlabs.com/learn/state-of-dependency-management-2023">Research from Endor Labs</a> analyzing software packages found that 95 percent of all vulnerabilities are found in transitive dependencies, meaning most security risk in your software supply chain is indirect.</p>
+<p>Systems without security updates remain vulnerable to every threat disclosed after support ends. The git vulnerability demonstrates how attackers exploit publicly documented weaknesses. Malicious repositories become attack vectors for remote code execution on developer workstations and CI/CD systems.</p>
+<p>Beyond immediate security exposure, organizations face tangible compliance and operational consequences. The EU Cyber Resilience Act, which applies from December 2027, requires manufacturers to provide timely security updates throughout a product’s lifecycle. Frameworks like FedRAMP, FISMA, and HIPAA require FIPS-140 certified cryptographic modules, while PCI-DSS mandates current security patches and vendor support. Running unsupported packages puts organizations at risk of failing these regulatory requirements. Organizations also face compatibility issues when newer packages expect updated dependencies and limited support when troubleshooting production incidents.</p>
+<h2 class="wp-block-heading">Your options when standard support ends</h2>
+<ol>
+<li><strong>Upgrade to a newer LTS release</strong></li>
+</ol>
+<p>Upgrading moves your infrastructure to an LTS version within its 5-year standard support window. This restores free security updates for packages in the main repository and eliminates the support gap for those packages.</p>
+<p>This approach works well when you have resources to test deployment thoroughly, your applications are compatible with the newer release, and you have time for comprehensive validation. The challenge is that major upgrades carry real costs and risks. Version jumps can break compatibility, require application changes, or introduce dependencies that need extensive testing before production deployment.</p>
+<ol start="2">
+<li><strong>Enable Ubuntu Pro for expanded security maintenance</strong></li>
+</ol>
+<p>Enabling Ubuntu Pro on your infrastructure extends security coverage from 5 years to 15 years for packages in both main and universe repositories. This allows you to continue running your current release while receiving backported security patches. Canonical’s security team actively scans, triages, and backports critical, high, and select medium CVEs to all maintained LTS releases.</p>
+<p>The backporting strategy means Canonical applies security fixes to your current package versions rather than forcing major upgrades. You receive vulnerability patches without the breaking changes that come with major version jumps or the re-certification requirements that disrupt tightly controlled compliance environments.</p>
+<p>Ubuntu Pro covers thousands of packages across main and universe. For organizations requiring the full 15-year support window, the legacy add-on becomes available after 10 years of coverage at 50% above the standard Ubuntu Pro subscription cost. We recommend this approach for organizations seeking cost-effective security and compliance. Ubuntu Pro offloads much of the vulnerability management effort while providing comprehensive coverage across open-source packages with simple, predictable pricing.</p>
+<p>Read about Canonical’s technical approach to security backporting and long term maintenance in our documentation at <a href="https://ubuntu.com/security/esm">ubuntu.com/security/esm</a>.</p>
+<ol start="3">
+<li><strong>Run without security updates</strong></li>
+</ol>
+<p>Though not recommended, you can consciously choose to run packages without active support. This might be considered when the package handles genuinely non-critical functionality, the system operates in complete isolation from network exposure, or strong compensating controls effectively mitigate the vulnerability risk.</p>
+<p>Be explicit about this choice and thoroughly document it. Maintain a register of unsupported packages with clear business justification, documented risk assessment, and regular review schedules. This will help you audit your system much faster in the future. What represents acceptable risk today may not remain acceptable as the threat landscape evolves and new attack patterns emerge.</p>
+<p>Running without support through ignorance or inertia differs fundamentally from making a conscious risk acceptance decision with appropriate governance and executive approval.</p>
+<h2 class="wp-block-heading">How expanded security maintenance works</h2>
+<p>Canonical’s security team monitors for vulnerabilities daily and evaluates their impact on supported packages. When vulnerabilities affect packages under Ubuntu Pro coverage, engineers apply available upstream patches or backport security fixes from newer versions to your maintained release. Updates undergo rigorous testing to verify stability and compatibility before becoming available through standard package management.</p>
+<p>For embargoed vulnerabilities like the recent git security issues, Canonical prepares fixes in advance and releases them precisely when the embargo lifts, ensuring you’re protected the moment the vulnerability becomes public knowledge.</p>
+<p>This approach means you don’t face a forced choice between security and operational stability. You maintain your current, tested environment while receiving necessary security patches that preserve compatibility.</p>
+<h2 class="wp-block-heading">How to choose the right approach after End of Standard support</h2>
+<p>LTS release support timelines are predictable. Ubuntu 20.04 released in April 2020 and reached End of Standard Support in April 2025, exactly 5 years later. Begin planning at least 6 months before standard support concludes. This gives you time to audit affected packages, test upgrade paths, secure budget, and coordinate infrastructure changes. Strategic planning prevents emergency decisions under pressure.</p>
+<p>Your decision depends on risk tolerance, compliance requirements, engineering capacity, and budget. Most enterprises use a combination approach. Overall, our suggestions are as follows:</p>
+<ul>
+<li>You should choose to upgrade your LTS when you can test thoroughly, your stack supports the next LTS, and staying current aligns with your strategy.</li>
+<li>Choose expanded security maintenance when you need stability, lack upgrade resources, or require patches without version mandates.</li>
+<li>You should <strong>only </strong>accept running without updates if you can reasonably maintain minimal risk exposure, can implement strong compensating controls, and have explicit documented approval.</li>
+<li>The worst outcome is no decision at all, allowing support coverage to lapse through inaction.</li>
+</ul>
+<h2 class="wp-block-heading">What should you do today?</h2>
+<p>Run <strong>pro security-status</strong> to assess your current coverage. Identify which packages will lose standard support and when.</p>
+<p>For Ubuntu 20.04 or earlier, standard support has ended. Those systems need decisions now.</p>
+<figure class="wp-block-pullquote"><blockquote><p>Explore Ubuntu Pro options at <a href="http://ubuntu.com/pro">ubuntu.com/pro</a> or <a href="https://ubuntu.com/contact-us/form?product=pro">contact our team</a> to discuss your requirements.</p></blockquote></figure>
+<p><strong>Read more:</strong></p>
+<ul>
+<li><a href="https://ubuntu.com/about/release-cycle">Understand Ubuntu release cycle</a></li>
+<li><a href="https://ubuntu.com/pro/linux-patch-management-with-pro">See which packages Ubuntu Pro supports</a></li>
+<li><a href="https://ubuntu.com/security/security-standards">Run Ubuntu in high-security environments</a></li>
+</ul>]]></description>
+      <source url="https://ubuntu.com/blog/feed/">Ubuntu Blog</source>
+    </item>
     <item>
       <title>E371 Pluvioso Duvidoso</title>
       <link>https://podcastubuntuportugal.org/e371/</link>
@@ -169,56 +237,6 @@ A arte de episódio foi criada por encomenda pela Shizamura - artista, ilustrado
       <source url="https://jnsgr.uk/tags/ubuntu/index.xml">Jon Seager</source>
     </item>
     <item>
-      <title>Showcasing open design in action: Loughborough University design students explore open source projects</title>
-      <link>https://ubuntu.com//blog/showcasing-open-design-in-action-loughborough-university-design-students-explore-open-source-projects</link>
-      <guid isPermaLink="true">https://ubuntu.com//blog/showcasing-open-design-in-action-loughborough-university-design-students-explore-open-source-projects</guid>
-      <pubDate>Mon, 19 Jan 2026 11:09:04 GMT</pubDate>
-      <description><![CDATA[<figure class="wp-block-image size-full"><img alt="" height="372" loading="lazy" sizes="(min-width: 660px) 660px, 100vw" src="https://res.cloudinary.com/canonical/image/fetch/f_auto,q_auto,fl_sanitize,c_fill,w_660/https%3A%2F%2Fubuntu.com%2Fwp-content%2Fuploads%2F42a7%2Fimage.png" srcset="https://res.cloudinary.com/canonical/image/fetch/f_auto,q_auto,fl_sanitize,c_fill,w_460/https%3A%2F%2Fubuntu.com%2Fwp-content%2Fuploads%2F42a7%2Fimage.png 460w, https://res.cloudinary.com/canonical/image/fetch/f_auto,q_auto,fl_sanitize,c_fill,w_620/https%3A%2F%2Fubuntu.com%2Fwp-content%2Fuploads%2F42a7%2Fimage.png 620w, https://res.cloudinary.com/canonical/image/fetch/f_auto,q_auto,fl_sanitize,c_fill,w_1036/https%3A%2F%2Fubuntu.com%2Fwp-content%2Fuploads%2F42a7%2Fimage.png 1036w, https://res.cloudinary.com/canonical/image/fetch/f_auto,q_auto,fl_sanitize,c_fill,w_660/https%3A%2F%2Fubuntu.com%2Fwp-content%2Fuploads%2F42a7%2Fimage.png 660w" width="660"/></figure>
-<p>Last year, we collaborated with two design student teams from Loughborough University in the UK. These students were challenged to work on open source project briefs. Team 1 focused on non-code contributions, while Team 2’s brief was to create a unified documentation experience, giving them a chance to apply their design skills to real-world problems within the open source ecosystem.</p>
-<p>We reached out to <a href="https://www.lboro.ac.uk/schools/design-creative-arts/" rel="noreferrer noopener" target="_blank">Loughborough University School of Design and Creative Arts</a> because there is a real need for non-code contributions in the open source ecosystem. Design thinking, which goes beyond the code to consider the user experience, is paramount if we want open source to thrive and gain ever more widespread adoption. Each team tackled a unique challenge that reflects the growing need for design thinking in open source, where developers have traditionally led, but where a better user experience is now urgently needed.</p>
-<p>This post celebrates their thoughtful work, sharing reflections from their design journey, and invites others to consider contributing to open source projects!</p>
-<p>Interested in checking out the project briefs yourself? The briefs are open for anyone to explore, think about, and attempt to solve. Whether you’re thinking of ideas, writing them on a napkin, or developing your solution, there are no limitations to your creativity here! <a href="https://assets.ubuntu.com/v1/7bd9c15e-project_briefs_for_universities.pdf" rel="noreferrer noopener" target="_blank">Get the briefs here</a> (PDF).</p>
-<h1 class="wp-block-heading">Team 1: Improving design approachability in open source</h1>
-<p>Project brief: Increase designer participation in open source projects and contributing non-code contributions.<br/><br/>Objective: Help improve how designers engage with open source projects by lowering barriers to entry and encouraging more meaningful design contributions.<br/></p>
-<p>Team members: <a href="https://www.linkedin.com/in/mirunaalini-meera-alagarajah-3755211b3/" rel="noreferrer noopener" target="_blank">Mirunaalini Alagarajah</a>, <a href="https://www.linkedin.com/in/giridharpabbati/" rel="noreferrer noopener" target="_blank">Giridhar pabbati</a>, <a href="https://www.linkedin.com/in/jiarui-he-579796336/" rel="noreferrer noopener" target="_blank">Jiarui He</a>, Lechen Zou, <a href="https://sdcapgshow2025.lboro.ac.uk/student/clara-lin/" rel="noreferrer noopener" target="_blank">Clara Lin</a></p>
-<p><br/>Check out their <a href="https://assets.ubuntu.com/v1/52567bad-final_slides_cocreate_5_canonical_compressed.pdf" rel="noreferrer noopener" target="_blank">project presentation</a>!</p>
-<h2 class="wp-block-heading">Reflection from the team</h2>
-<h4 class="wp-block-heading">What was it like working on a real open source design challenge?</h4>
-<p>This project really challenged us as a team, testing our collaboration, adaptability, and time management skills. Tackling a real client brief helped us engage more deeply with the problem and understand its real-world context. Working with Canonical was particularly motivating, as it gave us the sense that our efforts were contributing to something genuinely impactful.</p>
-<h4 class="wp-block-heading">What surprised you most about open source?</h4>
-<p>As a team, we realised we hadn’t truly thought about the various barriers designers encounter when engaging with open source projects. We also found it fascinating that many designers are quite protective of their work, which makes open sharing a real challenge. It created a unique tension –everyone wanted to learn from others, but few felt comfortable giving their work away for free.</p>
-<h4 class="wp-block-heading">What design decision did your team focus on and why?</h4>
-<p>We used insights from our user research to guide our design direction, ensuring that each decision was grounded in evidence. Prototyping allowed us to test various design details and components, which helped us refine our approach and gain a much clearer sense of direction. As a team, we brought diverse backgrounds and skill sets—those with stronger design experience naturally took the lead in developing and refining the visual aspects of the project.</p>
-<h4 class="wp-block-heading">How has this experience influenced how you think about design and collaboration?</h4>
-<p>On reflection, there were many possible directions we could have taken, but in hindsight, grounding our decisions in user insights and continuous testing helped align the team around a clear vision. Regular client feedback was invaluable in refining our approach and ensuring we stayed true to user needs. Additionally, leveraging each team member’s strengths allowed us to work more efficiently and make the most of our diverse skills. Overall, it was a valuable experience that taught us how to collaborate rapidly and effectively to address a real-world brief.</p>
-<h1 class="wp-block-heading">Team 2: Unifying Juju’s documentation ecosystem</h1>
-<p>Project brief: Improve the accessibility, clarity, and cohesiveness of Juju’s documentation to enhance user experience and encourage adoption.<br/><br/>Objective: Reimagining how users discover and learn about Juju (Canonical’s open source application orchestration engine for the deployment, integration, and lifecycle management) by improving the documentation experience. </p>
-<p>Team members:<a href="https://sharvarirai.framer.website/" rel="noreferrer noopener" target="_blank"> Sharvari Rai</a>, <a href="https://www.linkedin.com/in/bavraj-virdi-120030254/" rel="noreferrer noopener" target="_blank">Bavraj Virdi</a>, <a href="https://www.linkedin.com/in/xinya-wang-79297b390/" rel="noreferrer noopener" target="_blank">Xinya Wang</a>, <a href="https://www.linkedin.com/in/siying-fan-324508368/" rel="noreferrer noopener" target="_blank">Siying Fan</a>, <a href="https://www.linkedin.com/in/qingwan-yu-b138a8368/" rel="noreferrer noopener" target="_blank">Qingwan</a><a href="https://www.linkedin.com/in/qingwan-yu-b138a8368/"> Yu<br/><br/></a>Check out their <a href="https://www.figma.com/deck/sl4Je3lBfLQIAHLTKVVJsK/Canonical?node-id=1-126&amp;viewport=-88%2C-46%2C0.52&amp;t=mKdUYsomHF7yzYyI-1&amp;scaling=min-zoom&amp;content-scaling=fixed&amp;page-id=0%3A1" rel="noreferrer noopener" target="_blank">project presentation</a>!</p>
-<h2 class="wp-block-heading">Reflection from the team</h2>
-<h4 class="wp-block-heading">What were your first impressions about the problem space?</h4>
-<p>When we were first introduced to the project, our initial reaction was that the brief felt highly technical and complex, with unfamiliar terms like charms, operators, and Kubernetes. As none of us came from a technical or programming background, the documentation space felt like a challenge for us was the learning curve of diving in and understanding what is in the documentation and what it means. We struggled to identify a clear starting point and to understand the overall purpose of Juju beyond the jargon. Since the platform is mainly aimed at developers, it was difficult at first to relate to or imagine user needs. Despite that, this initial confusion actually helped us empathise with potential users facing similar barriers, and it highlighted the importance of clarity and structure in the documentation. </p>
-<h4 class="wp-block-heading">What was your approach to designing a more unified documentation experience?</h4>
-<p>Our approach began with breaking down the brief into simpler terms and mapping the current documentation ecosystem so we could better understand the challenges. As a team, we created personas for both new and experienced users, which helped us think about different entry points and the level of guidance each group might need. We then sketched user journeys to highlight pain points and challenges. From there, we focused on developing a single, structured information architecture with clearer pathways for learning and troubleshooting.  The aim was to allow users to move confidently between different sections without having to relearn how to navigate each time. </p>
-<h4 class="wp-block-heading">What were the biggest challenges your team encountered during the project?</h4>
-<p>The main challenge was the steep learning curve of immersing ourselves in the technical complexity of the Juju ecosystem and its vast open source documentation, especially since most of us came from non-technical backgrounds. We had to quickly grasp the product and its entire linked ecosystem. As direct access to real users was limited, we relied heavily on secondary data, community forums, and the creation of personas to accurately map realistic pain points. Our constant goal was to balance technical accuracy with the required user-centred clarity, which pushed us to fundamentally rethink how developer documentation can effectively guide users without overwhelming them. </p>
-<h4 class="wp-block-heading">What skills or takeaways are you bringing with you from this experience?</h4>
-<p>This project was a major lesson in how to embrace and navigate ambiguity. This was a truly crucial learning experience when dealing with an unfamiliar domain, evolving product documentation, and diverse stakeholder needs. We significantly strengthened our ability to translate dense technical research into clear, actionable design recommendations. We also honed our communication and collaboration skills as a team, successfully aligning our user-focused vision with Canonical’s roadmap. Most importantly, we learned that user advocacy is vital even in highly technical environments, and that our focus is ultimately on humanising complex systems.</p>
-<h2 class="wp-block-heading">🎉Congratulations to both teams!</h2>
-<p>We would like to thank and congratulate both teams for their creativity, thoughtful research, and commitment to enhancing open source experiences through design. They approached complex, open-ended problems with maturity and curiosity, and their outcomes were both inspiring and practical. </p>
-<p>Their fresh perspectives also reminded us of the value of questioning assumptions and looking at familiar challenges through new eyes, reinforcing how much we as practitioners can learn from emerging designers.</p>
-<p>We hope these projects have not only added valuable work to their portfolios but also opened doors to future engagement with open source communities. We encourage them (and any other designer out there) to continue exploring open source, contributing through design, and helping shape more inclusive, user-friendly technologies!</p>
-<h2 class="wp-block-heading">Interested in running a project like this?</h2>
-<p>Are you part of a university looking to bring open source design into your curriculum? <a href="https://canonical.design/blog/open-design-the-opportunity-design-students-didnt-know-they-were-missing" rel="noreferrer noopener" target="_blank">We’re looking for academic partners</a> who want to give students meaningful, real-world experiences while contributing to the global open source ecosystem.</p>
-<p>Reach out at <a href="mailto:opendesign@canonical.com" rel="noreferrer noopener" target="_blank">opendesign@canonical.com</a></p>
-<p>Learn more at <a href="https://canonical.design/blog/open-design-the-opportunity-design-students-didnt-know-they-were-missing" rel="noreferrer noopener" target="_blank">Canonical.design</a></p>
-<p></p>
-<hr class="wp-block-separator has-alpha-channel-opacity"/>
-<h3 class="wp-block-heading"><strong>Join the Canonical design team</strong></h3>
-<p>We’re looking for designers who care about craft and how systems work under the hood. At Canonical, design sits at the intersection of UX, engineering, and open source where we shape cohesive, accessible experiences across cloud, desktop, and IoT products.</p>
-<p>If you enjoy solving complex problems and turning technical depth into clarity, explore our open roles: <strong><a href="https://canonical.com/careers/web-and-design" rel="noreferrer noopener" target="_blank">canonical.com/careers</a></strong></p>]]></description>
-      <source url="https://ubuntu.com/blog/feed/">Ubuntu Blog</source>
-    </item>
-    <item>
       <title>Malware Peddlers Are Now Hijacking Snap Publisher Domains</title>
       <link>https://blog.popey.com/2026/01/malware-purveyors-taking-over-published-snap-email-domains/</link>
       <guid isPermaLink="true">https://blog.popey.com/2026/01/malware-purveyors-taking-over-published-snap-email-domains/</guid>
@@ -360,15 +378,15 @@ A arte de episódio foi criada por encomenda pela Shizamura - artista, ilustrado
       <link>https://steveire.wordpress.com/2026/01/14/rest-api-development-with-qt-6/</link>
       <guid isPermaLink="true">https://steveire.wordpress.com/2026/01/14/rest-api-development-with-qt-6/</guid>
       <pubDate>Wed, 14 Jan 2026 11:58:06 GMT</pubDate>
-      <description><![CDATA[<p>This post describes an experiment using Qt 6.7’s REST APIs to explore Stripe’s payment model, and what I learned building a small desktop developer tool.</p>
+      <description><![CDATA[<p class="wp-block-paragraph">This post describes an experiment using Qt 6.7’s REST APIs to explore Stripe’s payment model, and what I learned building a small desktop developer tool.</p>
 
 
 
-<p>Recent Qt releases have included <a href="https://www.qt.io/blog/restful-client-applications-in-qt-6.7-and-forward">several conveniences</a> for developing clients of remote REST APIs. I recently tried it out with the <a href="https://docs.stripe.com/api">Stripe payments REST API</a> to get to grips with the Qt REST API in the real world. The overloading of the term <em>API</em> is unhelpful, I find, but hopefully not too confusing here.</p>
+<p class="wp-block-paragraph">Recent Qt releases have included <a href="https://www.qt.io/blog/restful-client-applications-in-qt-6.7-and-forward">several conveniences</a> for developing clients of remote REST APIs. I recently tried it out with the <a href="https://docs.stripe.com/api">Stripe payments REST API</a> to get to grips with the Qt REST API in the real world. The overloading of the term <em>API</em> is unhelpful, I find, but hopefully not too confusing here.</p>
 
 
 
-<p>As with almost <a href="https://steveire.wordpress.com/2019/04/30/the-future-of-ast-matching-refactoring-tools-eurollvm-and-accu/">everything I try out</a>, I created Qt desktop tooling as a developer aid to exploring the Stripe API and its behavior. Naming things is hard, but given that I want to put a &#8220;Q&#8221; in the name, googling &#8220;cute stripes&#8221; gives lots of hits about fashion, and the other too-obvious-to-say pun, I&#8217;ve pushed it to GitHub as &#8220;<a href="https://github.com/steveire/qashmere">Qashmere</a>&#8220;:</p>
+<p class="wp-block-paragraph">As with almost <a href="https://steveire.wordpress.com/2019/04/30/the-future-of-ast-matching-refactoring-tools-eurollvm-and-accu/">everything I try out</a>, I created Qt desktop tooling as a developer aid to exploring the Stripe API and its behavior. Naming things is hard, but given that I want to put a &#8220;Q&#8221; in the name, googling &#8220;cute stripes&#8221; gives lots of hits about fashion, and the other too-obvious-to-say pun, I&#8217;ve pushed it to GitHub as &#8220;<a href="https://github.com/steveire/qashmere">Qashmere</a>&#8220;:</p>
 
 
 
@@ -380,15 +398,15 @@ A arte de episódio foi criada por encomenda pela Shizamura - artista, ilustrado
 
 
 
-<p>Developers using REST APIs will generally be familiar with existing tooling such as Postman and Bruno, for synthesizing calls to collections of REST APIs. Indeed, Qashmere uses the Stripe Postman JSON definition to present the collection of APIs and parameters. Such tools have scripting interfaces and state to create workflows that a client of the REST API needs to support, like &#8220;create a payment, get the id of the payment back from the REST API and then cancel the payment with the id&#8221;, or &#8220;create a payment, get the id of the payment back from the REST API and then confirm it by id with a given credit card&#8221;. </p>
+<p class="wp-block-paragraph">Developers using REST APIs will generally be familiar with existing tooling such as Postman and Bruno, for synthesizing calls to collections of REST APIs. Indeed, Qashmere uses the Stripe Postman JSON definition to present the collection of APIs and parameters. Such tools have scripting interfaces and state to create workflows that a client of the REST API needs to support, like &#8220;create a payment, get the id of the payment back from the REST API and then cancel the payment with the id&#8221;, or &#8220;create a payment, get the id of the payment back from the REST API and then confirm it by id with a given credit card&#8221;. </p>
 
 
 
-<p>So why create Qashmere? In addition to REST APIs, Stripe maintains objects which change state over time. The objects remain at REST until acted on by an external force, and when such an action happens a notification is sent to clients about those state changes, giving them a chance to react. I wanted to be able to collect the REST requests/responses and the notified events and present them as they relate to the Stripe objects. Postman doesn&#8217;t know about events or about Stripe objects in particular, except that it is possible to write a script in Postman to extract the object which is part of a JSON payload. Postman also doesn&#8217;t know that if a Payment Intent is created, there are a subset of next steps which could be in a workflow, such as cancel, capture or confirm payment etc.</p>
+<p class="wp-block-paragraph">So why create Qashmere? In addition to REST APIs, Stripe maintains objects which change state over time. The objects remain at REST until acted on by an external force, and when such an action happens a notification is sent to clients about those state changes, giving them a chance to react. I wanted to be able to collect the REST requests/responses and the notified events and present them as they relate to the Stripe objects. Postman doesn&#8217;t know about events or about Stripe objects in particular, except that it is possible to write a script in Postman to extract the object which is part of a JSON payload. Postman also doesn&#8217;t know that if a Payment Intent is created, there are a subset of next steps which could be in a workflow, such as cancel, capture or confirm payment etc.</p>
 
 
 
-<p>Something that I discovered in the course of trying this out is that when I confirm a Payment Intent, a new Charge object is created and sent to me with the event notification system. Experimental experiences like that help build intuition.</p>
+<p class="wp-block-paragraph">Something that I discovered in the course of trying this out is that when I confirm a Payment Intent, a new Charge object is created and sent to me with the event notification system. Experimental experiences like that help build intuition.</p>
 
 
 
@@ -396,11 +414,11 @@ A arte de episódio foi criada por encomenda pela Shizamura - artista, ilustrado
 
 
 
-<p>Stripe operates with real money, but it also provides for sandboxes where synthetic payments, customers etc can be created and processed with synthetic payment methods and cards. As Qashmere is only useful as a developer tool or learning aid, it only works with Stripe sandboxes.</p>
+<p class="wp-block-paragraph">Stripe operates with real money, but it also provides for sandboxes where synthetic payments, customers etc can be created and processed with synthetic payment methods and cards. As Qashmere is only useful as a developer tool or learning aid, it only works with Stripe sandboxes.</p>
 
 
 
-<p>Events from Stripe are sent to pre-configured web servers owned by the client. The web servers need to have a public IP address, which is obviously not appropriate for a desktop application. A WebSocket API would be more suitable and indeed the stripe cli tool uses a WebSocket to receive events, but the WebSocket protocol is not documented or stable. Luckily the stripe cli tool can be used to relay events to another HTTP server, so Qashmere runs a <a href="https://doc.qt.io/qt-6/qhttpserver.html"><code>QHttpServer</code></a> for that purpose.</p>
+<p class="wp-block-paragraph">Events from Stripe are sent to pre-configured web servers owned by the client. The web servers need to have a public IP address, which is obviously not appropriate for a desktop application. A WebSocket API would be more suitable and indeed the stripe cli tool uses a WebSocket to receive events, but the WebSocket protocol is not documented or stable. Luckily the stripe cli tool can be used to relay events to another HTTP server, so Qashmere runs a <a href="https://doc.qt.io/qt-6/qhttpserver.html"><code>QHttpServer</code></a> for that purpose.</p>
 
 
 
@@ -412,11 +430,11 @@ A arte de episódio foi criada por encomenda pela Shizamura - artista, ilustrado
 
 
 
-<p>The <a href="https://doc.qt.io/qt-6/qrestreply.html"><code>QRestReply</code></a> wraps a <code>QNetworkReply</code> pointer and provides convenience API for accessing the HTTP return code and for creating a <a href="https://doc.qt.io/qt-6/qjsondocument.html"><code>QJsonDocument</code></a> from the body of the response. It must be created manually if using <code>QNetworkAccessManager</code> directly. However the new <a href="https://doc.qt.io/qt-6/qrestaccessmanager.html"><code>QRestAccessManager</code></a> wraps a <code>QNetworkAccessManager</code> pointer, again to provide convenience APIs and overloads for making requests that are needed in REST APIs (though some less common verbs like <code>OPTIONS</code> and <code>TRACE</code> are not built-in). The <code>QRestAccessManager</code> has conveniences like overloads that provide a way to supply callbacks which already take the <code>QRestReply</code> wrapper object as a parameter. If using a <code>QJsonDocument</code> request overload, the &#8220;<code>application/json</code>&#8221; <code>Content-Type</code> is automatically set in the header.</p>
+<p class="wp-block-paragraph">The <a href="https://doc.qt.io/qt-6/qrestreply.html"><code>QRestReply</code></a> wraps a <code>QNetworkReply</code> pointer and provides convenience API for accessing the HTTP return code and for creating a <a href="https://doc.qt.io/qt-6/qjsondocument.html"><code>QJsonDocument</code></a> from the body of the response. It must be created manually if using <code>QNetworkAccessManager</code> directly. However the new <a href="https://doc.qt.io/qt-6/qrestaccessmanager.html"><code>QRestAccessManager</code></a> wraps a <code>QNetworkAccessManager</code> pointer, again to provide convenience APIs and overloads for making requests that are needed in REST APIs (though some less common verbs like <code>OPTIONS</code> and <code>TRACE</code> are not built-in). The <code>QRestAccessManager</code> has conveniences like overloads that provide a way to supply callbacks which already take the <code>QRestReply</code> wrapper object as a parameter. If using a <code>QJsonDocument</code> request overload, the &#8220;<code>application/json</code>&#8221; <code>Content-Type</code> is automatically set in the header.</p>
 
 
 
-<p>One of the inconveniences of <code>QRestAccessManager</code> is that in Qashmere I use an external definition of the REST API from the Postman definition which includes the HTTP method. Because the <code>QRestAccessManager</code> provides strongly typed API for making requests I need to do something like:</p>
+<p class="wp-block-paragraph">One of the inconveniences of <code>QRestAccessManager</code> is that in Qashmere I use an external definition of the REST API from the Postman definition which includes the HTTP method. Because the <code>QRestAccessManager</code> provides strongly typed API for making requests I need to do something like:</p>
 
 
 <div class="wp-block-code">
@@ -429,11 +447,11 @@ A arte de episódio foi criada por encomenda pela Shizamura - artista, ilustrado
 </div>
 
 
-<p>There is a <code>sendCustomRequest</code> class API which can be used with a string, but it does not have an overload for <code>QJsonDocument</code>, so the convenience of having the <code>Content-Type</code> header set is lost. This may be an oversight in the <code>QRestAccessManager</code> API.</p>
+<p class="wp-block-paragraph">There is a <code>sendCustomRequest</code> class API which can be used with a string, but it does not have an overload for <code>QJsonDocument</code>, so the convenience of having the <code>Content-Type</code> header set is lost. This may be an oversight in the <code>QRestAccessManager</code> API.</p>
 
 
 
-<p>Another missing feature is URL parameter interpolation. Many REST APIs are described as something like <code>/v1/object/:object_id/cancel</code>, and it would be convenient to have a safe way to interpolate the parameters into the URL, such as:</p>
+<p class="wp-block-paragraph">Another missing feature is URL parameter interpolation. Many REST APIs are described as something like <code>/v1/object/:object_id/cancel</code>, and it would be convenient to have a safe way to interpolate the parameters into the URL, such as:</p>
 
 
 <div class="wp-block-code">
@@ -446,7 +464,7 @@ A arte de episódio foi criada por encomenda pela Shizamura - artista, ilustrado
 </div>
 
 
-<p>This is needed to avoid bugs such as a user-supplied parameter containing a slash for example.</p>
+<p class="wp-block-paragraph">This is needed to avoid bugs such as a user-supplied parameter containing a slash for example.</p>
 
 
 
@@ -454,7 +472,7 @@ A arte de episódio foi criada por encomenda pela Shizamura - artista, ilustrado
 
 
 
-<p>In recent years I&#8217;ve been writing and reading more Typescript/Angular code which consumes REST services, and less C++. I&#8217;ve enjoyed the way <code>Promise</code>s work in that environment, allowing sequences of REST requests, for example, to be easy to write and read. A test of a pseudo API could <code>await</code> on requests to complete and invoke the next one with something like:</p>
+<p class="wp-block-paragraph">In recent years I&#8217;ve been writing and reading more Typescript/Angular code which consumes REST services, and less C++. I&#8217;ve enjoyed the way <code>Promise</code>s work in that environment, allowing sequences of REST requests, for example, to be easy to write and read. A test of a pseudo API could <code>await</code> on requests to complete and invoke the next one with something like:</p>
 
 
 <div class="wp-block-code">
@@ -467,15 +485,15 @@ A arte de episódio foi criada por encomenda pela Shizamura - artista, ilustrado
 </div>
 
 
-<p>The availability of <code>async</code> functions and the <code>Promise</code> to await on make a test like this quite easy to write, and the in-application use of the API uses the same <code>Promise</code>s, so there is little friction between application code and test code.</p>
+<p class="wp-block-paragraph">The availability of <code>async</code> functions and the <code>Promise</code> to await on make a test like this quite easy to write, and the in-application use of the API uses the same <code>Promise</code>s, so there is little friction between application code and test code.</p>
 
 
 
-<p>I wanted to see if I can recreate something like that based on the Qt networking APIs. I briefly tried using C++20 coroutines because they would allow a style closer to <code>async</code>/<code>await</code>, but the integration friction with existing Qt types was higher than I wanted for an experiment.</p>
+<p class="wp-block-paragraph">I wanted to see if I can recreate something like that based on the Qt networking APIs. I briefly tried using C++20 coroutines because they would allow a style closer to <code>async</code>/<code>await</code>, but the integration friction with existing Qt types was higher than I wanted for an experiment.</p>
 
 
 
-<p>Using the methods in <code>QtFuture</code> however, we already have a way to create objects representing the response from a REST API. The result is similar to the Typescript example, but with different ergonomics, using <code>.then</code> instead of the <code>async</code> and <code>await</code> keywords.</p>
+<p class="wp-block-paragraph">Using the methods in <code>QtFuture</code> however, we already have a way to create objects representing the response from a REST API. The result is similar to the Typescript example, but with different ergonomics, using <code>.then</code> instead of the <code>async</code> and <code>await</code> keywords.</p>
 
 
 <div class="wp-block-code">
@@ -488,7 +506,7 @@ A arte de episódio foi criada por encomenda pela Shizamura - artista, ilustrado
 </div>
 
 
-<p>The <code>QRestAccessManager</code> API requires the creation of a dummy response function when creating a custom request because it is not really designed to be used this way. The result is an API accepting a request and returning a <code>QFuture</code> with the <code>QJsonDocument</code> content. While it is possible for a REST endpoint to return something else, we can follow the Qt philosophy of making the most expected case as easy as possible, while leaving most of the rest possible another way. This utility makes writing unit tests relatively straightforward too:<br></p>
+<p class="wp-block-paragraph">The <code>QRestAccessManager</code> API requires the creation of a dummy response function when creating a custom request because it is not really designed to be used this way. The result is an API accepting a request and returning a <code>QFuture</code> with the <code>QJsonDocument</code> content. While it is possible for a REST endpoint to return something else, we can follow the Qt philosophy of making the most expected case as easy as possible, while leaving most of the rest possible another way. This utility makes writing unit tests relatively straightforward too:<br></p>
 
 
 <div class="wp-block-code">
@@ -501,11 +519,11 @@ A arte de episódio foi criada por encomenda pela Shizamura - artista, ilustrado
 </div>
 
 
-<p>The result is quite similar to the Typescript above, but only because we can use <code>spy.wait</code>. In application code, we still need to use <code>.then</code> with a callback, but we can additionally use <code>.onFailed</code> and <code>.onCanceled</code> instead of making multiple signal/slot connections. </p>
+<p class="wp-block-paragraph">The result is quite similar to the Typescript above, but only because we can use <code>spy.wait</code>. In application code, we still need to use <code>.then</code> with a callback, but we can additionally use <code>.onFailed</code> and <code>.onCanceled</code> instead of making multiple signal/slot connections. </p>
 
 
 
-<p>With the addition of <code>QtFuture::whenAll</code>, it is easy to make multiple REST requests at once and react when they are all finished, so perhaps something else has been gained too, compared to a signal/slot model:</p>
+<p class="wp-block-paragraph">With the addition of <code>QtFuture::whenAll</code>, it is easy to make multiple REST requests at once and react when they are all finished, so perhaps something else has been gained too, compared to a signal/slot model:</p>
 
 
 <div class="wp-block-code">
@@ -522,7 +540,7 @@ A arte de episódio foi criada por encomenda pela Shizamura - artista, ilustrado
 
 
 
-<p>I attempted to use new API additions in recent Qt 6 versions to interact with a few real-world REST services. The additions are valuable, but it seems that there are a few places where improvements might be possible. My attempt to make the API feel closer to what developers in other environments might be accustomed to had some success, but I&#8217;m not sure <code>QFuture</code> is really intended to be used this way.<br>Do readers have any feedback? Would using QCoro improve the coroutine experience? Is it very unusual to create an application with QWidgets instead of QML these days? Should I have used PyQt and the python networking APIs?</p>]]></description>
+<p class="wp-block-paragraph">I attempted to use new API additions in recent Qt 6 versions to interact with a few real-world REST services. The additions are valuable, but it seems that there are a few places where improvements might be possible. My attempt to make the API feel closer to what developers in other environments might be accustomed to had some success, but I&#8217;m not sure <code>QFuture</code> is really intended to be used this way.<br>Do readers have any feedback? Would using QCoro improve the coroutine experience? Is it very unusual to create an application with QWidgets instead of QML these days? Should I have used PyQt and the python networking APIs?</p>]]></description>
       <source url="https://steveire.wordpress.com/feed/?mrss=off">Stephen Kelly</source>
     </item>
     <item>
