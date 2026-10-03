@@ -20,16 +20,6 @@
     "url": "http://ubuntugnome.org/feed/?mrss=off"
   },
   {
-    "name": "Ubuntu Blog",
-    "nick": "dholbach",
-    "url": "https://ubuntu.com/blog/feed/"
-  },
-  {
-    "name": "Dave Morley",
-    "nick": "davmor2",
-    "url": "http://davmor2.blogspot.com/rss.xml"
-  },
-  {
     "name": "Andrea Corbellini",
     "nick": "andrea.corbellini",
     "url": "http://andrea.corbellini.name/ubuntu.rss"
@@ -70,16 +60,6 @@
     "url": "https://www.chiark.greenend.org.uk/~cjwatson/blog/feeds/tag/planet-ubuntu.atom.xml"
   },
   {
-    "name": "Jonathan Carter",
-    "nick": "jonathan",
-    "url": "https://jonathancarter.org/feed"
-  },
-  {
-    "name": "Scott Balneaves",
-    "nick": "sbalneav",
-    "url": "http://ltspthinclient.blogspot.com/atom.xml"
-  },
-  {
     "name": "Kees Cook",
     "nick": "kees",
     "url": "http://outflux.net/blog/archives/category/ubuntu/feed"
@@ -100,11 +80,6 @@
     "url": "http://blog.ryanak.ca/feeds/planet-ubuntu.xml"
   },
   {
-    "name": "Mark Van den Borre",
-    "nick": "markvdb",
-    "url": "http://blog.markvdb.be/feeds/posts/full/-/english/ubuntu"
-  },
-  {
     "name": "Carlos Diener - emonkey",
     "nick": "emonkey",
     "url": "http://blog.diener.li/feed"
@@ -113,11 +88,6 @@
     "name": "Elizabeth K. Joseph",
     "nick": "lyz",
     "url": "http://princessleia.com/journal/?cat=2&feed=rss2"
-  },
-  {
-    "name": "Harald Sitter",
-    "nick": "apachelogger",
-    "url": "https://apachelog.wordpress.com/category/kde/feed/?mrss=off&category_name=ubuntu"
   },
   {
     "name": "Michael Vogt",
@@ -148,16 +118,6 @@
     "name": "Julian Andres Klode",
     "nick": "juliank",
     "url": "https://blog.jak-linux.org/post/index.xml"
-  },
-  {
-    "name": "Murat Güneş",
-    "nick": "mgunes",
-    "url": "https://mgunes.wordpress.com/tag/planet-ubuntu/feed/atom/"
-  },
-  {
-    "name": "Rick Clark",
-    "nick": "dendrobates",
-    "url": "https://dendrobates.wordpress.com/category/Ubuntu/atom"
   },
   {
     "name": "Nathan Haines",
@@ -225,11 +185,6 @@
     "url": "http://losca.blogspot.com/feeds/posts/default/-/ubuntu?alt=rss"
   },
   {
-    "name": "Scott Kitterman",
-    "nick": "kitterman",
-    "url": "https://skitterman.wordpress.com/category/Ubuntu/feed/atom"
-  },
-  {
     "name": "Rafik Ouerchefani",
     "nick": "rafik",
     "url": "http://rafiiik.blogspot.com/feeds/posts/default/-/Ubuntu"
@@ -240,19 +195,9 @@
     "url": "https://didrocks.fr/tags/pu/index.xml"
   },
   {
-    "name": "Luca Falavigna",
-    "nick": "dktrkranz",
-    "url": "https://dktrkranz.wordpress.com/category/planet-ubuntu/feed/atom/"
-  },
-  {
     "name": "Thierry Carrez",
     "nick": "ttx",
     "url": "http://ttx.re/feeds/open-source.atom.xml"
-  },
-  {
-    "name": "Luke Faraone",
-    "nick": "lfaraone",
-    "url": "http://blog.luke.wf/feeds/posts/default/-/ubuntu-planet/"
   },
   {
     "name": "Dougie Richardson",
@@ -265,19 +210,9 @@
     "url": "http://feeds.alestic.com/alestic-planetubuntu"
   },
   {
-    "name": "Jo Shields",
-    "nick": "directhex",
-    "url": "http://apebox.org/wordpress/tag/ubuntu/feed/"
-  },
-  {
     "name": "Pasi Lallinaho",
     "nick": "knome",
     "url": "http://open.knome.fi/category/ubuntu/feed/"
-  },
-  {
-    "name": "David Planella",
-    "nick": "dpm",
-    "url": "https://davidplanella.wordpress.com/category/english/ubuntu/feed/atom"
   },
   {
     "name": "Khairul Aizat Kamarudzzaman",
@@ -305,11 +240,6 @@
     "url": "https://blog.simos.info/category/planet-ubuntu/feed/?mrss=off"
   },
   {
-    "name": "Salih Emin",
-    "nick": "salihemin",
-    "url": "http://utappia.org/feed/"
-  },
-  {
     "name": "Martin-Éric Racine",
     "nick": "q-funk",
     "url": "http://q-funk.blogspot.com/feeds/posts/default/-/Ubuntu"
@@ -323,11 +253,6 @@
     "name": "Benjamin Drung",
     "nick": "bdrung",
     "url": "https://overbenny.wordpress.com/category/planet-ubuntu/feed/atom"
-  },
-  {
-    "name": "Robert Ancell",
-    "nick": "robert-ancell",
-    "url": "http://bobthegnome.blogspot.com/feeds/posts/default"
   },
   {
     "name": "Aron Xu",
@@ -365,11 +290,6 @@
     "url": "http://leftyfb.com/?feed=rss2&cat=4"
   },
   {
-    "name": "Michael Hall",
-    "nick": "mhall119",
-    "url": "https://mhall119.com/blog/category/planet-ubuntu/feeds/rss/"
-  },
-  {
     "name": "Scott Moser",
     "nick": "smoser",
     "url": "https://smoser.github.io/feed/by_tag/ubuntu.xml"
@@ -380,19 +300,9 @@
     "url": "https://coderstalk.blogspot.com/feeds/posts/default/"
   },
   {
-    "name": "Harisfazillah Jamel",
-    "nick": "LinuxMalaysia",
-    "url": "https://feeds.feedburner.com/TodayNotesBlogAboutLinuxOpenSourceComputerInternet"
-  },
-  {
     "name": "Rhonda D'Vine",
     "nick": "rhonda",
     "url": "https://rhonda.deb.at/blog/?flav=rss&lang=en"
-  },
-  {
-    "name": "Cesar Sevilla",
-    "nick": "c3s4r",
-    "url": "https://cesarsevilla.wordpress.com/category/ubuntu/feed/?mrss=off"
   },
   {
     "name": "Belinda Lopez",
@@ -445,19 +355,9 @@
     "url": "https://desentropia.com/tags/ubuntu/index.xml"
   },
   {
-    "name": "Sergio Zanchetta",
-    "nick": "primes2h",
-    "url": "https://primes2h.wordpress.com/category/ubuntu/feed/?mrss=off"
-  },
-  {
     "name": "Iain Lane",
     "nick": "laney",
     "url": "https://blogs.gnome.org/laney/category/planetubuntu/feed/"
-  },
-  {
-    "name": "Diego Turcios",
-    "nick": "diegoturcios",
-    "url": "http://diegoturcios.blogspot.com/feeds/posts/default/-/planet-ubuntu"
   },
   {
     "name": "Nobuto Murata",
@@ -555,11 +455,6 @@
     "url": "https://rafalcieslak.wordpress.com/category/ubuntu/feed/?mrss=off"
   },
   {
-    "name": "Thomas Bechtold",
-    "nick": "toabctl",
-    "url": "https://toabctl.wordpress.com/category/planet-ubuntu/feed/?mrss=off"
-  },
-  {
     "name": "Jhosman Lizarazo",
     "nick": "jhosman",
     "url": "http://feeds.feedburner.com/Jhosmanenglish"
@@ -575,19 +470,9 @@
     "url": "http://daker.me/feed-ubuntuplanet.xml"
   },
   {
-    "name": "Jackson Doak",
-    "nick": "noskcaj",
-    "url": "https://noskcaj10.wordpress.com/category/ubuntu/feed/?mrss=off"
-  },
-  {
     "name": "Robie Basak",
     "nick": "racb",
     "url": "http://www.justgohome.co.uk/blog/feeds/tag/planet-ubuntu.atom.xml"
-  },
-  {
-    "name": "Sujeevan Vijayakumaran",
-    "nick": "svij",
-    "url": "https://svij.org/tags/ubuntu-planet/index.xml"
   },
   {
     "name": "Marco Trevisan (Treviño)",
@@ -595,19 +480,9 @@
     "url": "http://blog.3v1n0.net/tag/planet-ubuntu/feed/"
   },
   {
-    "name": "Alberto Milone",
-    "nick": "albertomilone",
-    "url": "http://albertomilone.com/wordpress/?feed=rss2"
-  },
-  {
     "name": "Daniel T Chen",
     "nick": "crimsun",
     "url": "http://drowninginbugs.blogspot.com/feeds/posts/default/-/ubuntu"
-  },
-  {
-    "name": "Myriam Schweingruber",
-    "nick": "myriam",
-    "url": "http://blogs.fsfe.org/myriam/?feed=rss2"
   },
   {
     "name": "Mario Limonciello",
@@ -645,19 +520,9 @@
     "url": "http://blog.tenstral.net/category/planet/planet-ubuntu/feed"
   },
   {
-    "name": "Sergio Schvezov",
-    "nick": "sergiusens",
-    "url": "http://blog.sergiusens.org/categories/ubuntu/index.xml"
-  },
-  {
     "name": "Chris Glass",
     "nick": "tribaal",
     "url": "https://tribaal.io/feeds/ubuntu"
-  },
-  {
-    "name": "Ross Gammon",
-    "nick": "rosco2",
-    "url": "https://rossgammon68.wordpress.com/category/open-source/ubuntu/ubuntu-planet/feed/?mrss=off"
   },
   {
     "name": "Jeremy Bicha",
@@ -668,16 +533,6 @@
     "name": "David Mohammed",
     "nick": "fossfreedom",
     "url": "https://ubuntubudgie.org/feed/"
-  },
-  {
-    "name": "Corey Bryant",
-    "nick": "corey.bryant",
-    "url": "https://wrestlingpenguins.wordpress.com/category/ubuntu/feed/?mrss=off"
-  },
-  {
-    "name": "James Gifford",
-    "nick": "jamesgifford",
-    "url": "https://armyofminions.com/feeds/planet_ubuntu.xml"
   },
   {
     "name": "Balint Reczey",
@@ -733,11 +588,6 @@
     "name": "Lubuntu Blog",
     "nick": "teward",
     "url": "http://lubuntu.me/feed/?mrss=off"
-  },
-  {
-    "name": "Ubuntu MATE",
-    "nick": "ubuntu-mate-dev",
-    "url": "https://ubuntu-mate.org/rss.xml"
   },
   {
     "name": "Jon Seager",
